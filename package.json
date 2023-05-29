@@ -1,13 +1,13 @@
 {
-  "name": "vite-react-typescript",
+  "name": "r2023q1-graphiql-form",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Vite React TypeScript boilerplate",
+  "description": "React 2023-01 GraphiQL task check",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shopot/vite-react-typescript"
+    "url": "https://github.com/shopot/r2023q1-graphiql-form"
   },
   "scripts": {
     "dev": "vite",
