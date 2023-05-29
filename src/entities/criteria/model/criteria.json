@@ -28,7 +28,6 @@
     "The presence of errors and warnings in the console": -2,
     "The presence in the console of the results of the console.log execution": -2,
     "@ts-ignore or any usage (search through github repo) - point for each":  -1,
-    "Making commits after the deadline": -20,
-    "The administration reserves the right to apply penalties for the use of incorrect repository or branch names.": -20
+    "Making commits after the deadline": -20
   }
 }
