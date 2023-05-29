@@ -1,0 +1,34 @@
+{
+  "Welcome route - max 10 points": {
+    "The welcome page should contain general information about the developers, project, and course.":  2,
+    "In the upper right corner there are 2 buttons: Sign In and Sign Up.": 2,
+    "If login token is valid and unexpired, change the Sign In and Sign Up buttons to the \"Go to Main Page\" button.": 2,
+    "When the token expires - the user should be redirected to the \"Welcome page\" automatically.": 3,
+    "Pressing the Sign In / Sign up button redirects a user to the route with the Sign In / Sign up form.": 1
+  },
+  "Sign In / Sign Up - max 20 points": {
+    "Buttons for Sign In / Sign Up / Sign Out are everywhere where they should be": 5,
+    "Client-side validation should be implemented.": 10,
+    "Upon successful login, the user should be redirected to the Main page": 3,
+    "If the user is already logged in and tries to reach these routes, they should be redirected to the Main page.": 2
+  },
+  "GraphiQL route - max 50 points": {
+    "Working editor allowing to edit the query.": 15,
+    "Working documentation explorer, should be visible only when sdl request will succeed.": 15,
+    "Variables section. Should be closed/opened": 5,
+    "Headers section. Should be closed/opened": 5,
+    "Response section.": 10
+  },
+  "General requirements - max 10 points" : {
+    "Localization": 5,
+    "Sticky header": 5
+  },
+  "Penalties": {
+    "React default favicon":  -5,
+    "The presence of errors and warnings in the console": -2,
+    "The presence in the console of the results of the console.log execution": -2,
+    "@ts-ignore or any usage (search through github repo) - point for each":  -1,
+    "Making commits after the deadline": -20,
+    "The administration reserves the right to apply penalties for the use of incorrect repository or branch names.": -20
+  }
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "develop" ]; then
+  echo "You can't commit directly to develop branch. Please create your own branch and use PR"
+  exit 1
+fi
+
+npm run lintstaged
