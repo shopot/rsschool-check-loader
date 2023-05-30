@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createAbortSignal } from '@/shared/lib';
-
-const CANCEL_FETCH_TIMEOUT = 5000;
+import { CANCEL_FETCH_TIMEOUT } from '@/shared/config';
 
 export function useFetch<T>(uri: string, initialState: T) {
   const [data, setData] = useState<T>(initialState);
@@ -20,10 +19,10 @@ export function useFetch<T>(uri: string, initialState: T) {
     fetch(uri, { signal })
       .then((data) => data.json())
       .then(setData)
-      .then(() => setIsLoading(false))
       .catch((err) => {
         setError((err as Error).message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   }, [uri]);
 
   return {

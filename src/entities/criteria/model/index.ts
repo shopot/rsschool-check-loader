@@ -1,3 +1,3 @@
-import results from './criteria.json';
+import task from './task.json';
 
-export default { results } as const;
+export default { task } as const;
