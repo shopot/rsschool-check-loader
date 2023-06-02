@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "target": "ESNext",
     "lib": [
       "DOM",
@@ -25,10 +25,6 @@
       "@/*": [
         "src/*"
       ],
-      "*": [
-        "*",
-        "src/*"
-      ]
     }
   },
   "include": [
