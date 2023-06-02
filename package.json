@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
     "@types/compose-function": "^0.0.30",
     "antd": "^5.5.1",
     "compose-function": "^3.0.3",
