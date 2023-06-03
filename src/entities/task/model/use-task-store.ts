@@ -11,7 +11,6 @@ const initialState = {
   taskName: '',
   taskInformation: '',
   criteriaResults: [],
-  totalPoints: 0,
   maxTotalPoints: 0,
   error: '',
 };
@@ -20,7 +19,11 @@ const getInitialState = () => ({ ...initialState, criteriaResults: [] });
 
 const taskStore: TypeTaskStore = (set, get) => ({
   ...getInitialState(),
+
   fetchTask: (url: string) => {
+    // Reset state
+    get().reset();
+
     set({ isLoading: true });
 
     const signal = createAbortSignal(CANCEL_FETCH_TIMEOUT);
@@ -39,6 +42,7 @@ const taskStore: TypeTaskStore = (set, get) => ({
 
     console.log('fetching task url:', url);
   },
+
   initTask: (data) => {
     if (data === null) {
       set({ error: 'Invalid a data from json file' });
@@ -56,6 +60,34 @@ const taskStore: TypeTaskStore = (set, get) => ({
     } else {
       set({ error: 'Unknown a task from json file' });
     }
+  },
+
+  reset: (): void => {
+    set({ ...getInitialState() });
+  },
+
+  resetTotalPoints: (): void => {
+    const stateNext = get().criteriaResults.map((criteria) => ({ ...criteria, value: 0 }));
+
+    set({ criteriaResults: stateNext });
+  },
+
+  setCriteriaPoints: (id: number, value: number): void => {
+    const criteriaState = get().criteriaResults;
+
+    const idx = criteriaState.findIndex((item) => item.id === id);
+
+    if (idx) {
+      const stateNext = [...criteriaState];
+      stateNext[idx] = { ...stateNext[idx], value: value };
+      set({ criteriaResults: stateNext });
+    }
+  },
+
+  totalPoints: (): number => {
+    const total = get().criteriaResults.reduce((sum, criteria) => (sum += criteria.value), 0);
+
+    return total > 0 ? total : 0;
   },
 });
 
