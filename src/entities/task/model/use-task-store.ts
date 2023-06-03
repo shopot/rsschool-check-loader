@@ -85,7 +85,7 @@ const taskStore: TypeTaskStore = (set, get) => ({
   },
 
   totalPoints: (): number => {
-    const total = get().criteriaResults.reduce((sum, criteria) => (sum += criteria.value), 0);
+    const total = get().criteriaResults.reduce((sum, criteria) => sum + criteria.value, 0);
 
     return total > 0 ? total : 0;
   },
