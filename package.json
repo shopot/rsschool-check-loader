@@ -2,7 +2,7 @@
   "name": "rs-school-check-loader",
   "version": "1.0.0",
   "type": "module",
-  "description": "Rolling Scopes School cross check loader",
+  "description": "Rolling Scopes School cross-check form loader",
   "license": "MIT",
   "repository": {
     "type": "git",

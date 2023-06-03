@@ -16,7 +16,7 @@ export const HomePage = (): JSX.Element => {
   return (
     <Layout className={styles.layout}>
       <Layout.Content className={styles.contentStyle}>
-        <Typography.Title style={{ textAlign: 'center' }}>RS School cross check</Typography.Title>
+        <Typography.Title style={{ textAlign: 'center' }}>RS School cross-check</Typography.Title>
         <TaskLoaderForm />
         {isLoading && <Loader />}
         {!isLoading && loadedIn && <Task />}
