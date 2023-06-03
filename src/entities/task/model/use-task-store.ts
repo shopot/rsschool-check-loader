@@ -9,6 +9,7 @@ import { createCriteria, createAbortSignal } from '../lib';
 const initialState = {
   isLoading: false,
   taskName: '',
+  github: '',
   taskInformation: '',
   criteriaResults: [],
   maxTotalPoints: 0,
@@ -49,11 +50,12 @@ const taskStore: TypeTaskStore = (set, get) => ({
       return;
     }
 
-    const { taskName, criteria, information } = data;
+    const { taskName, criteria, information, github } = data;
 
-    if (taskName && criteria && information) {
+    if (taskName && criteria && information && github) {
       set({
         taskName: taskName,
+        github: github,
         taskInformation: information,
         criteriaResults: createCriteria(criteria as TypeCriteria[]),
       });

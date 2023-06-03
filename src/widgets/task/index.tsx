@@ -5,7 +5,7 @@ import { TaskTotalPoints } from '@/feature/task-total-points';
 import { TaskCheckList } from '@/feature/task-check-list';
 
 export const Task = (): JSX.Element => {
-  const { taskName, taskInformation } = useTaskStore();
+  const { taskName, github, taskInformation } = useTaskStore();
   const [form] = Form.useForm();
 
   const { Title } = Typography;
@@ -19,6 +19,9 @@ export const Task = (): JSX.Element => {
   return (
     <>
       <Title level={4}>Task name: {taskName}</Title>
+      <a href={github} target="_blank" rel="noreferrer">
+        {github}
+      </a>
       <Divider />
       <TaskTotalPoints />
       <Title level={5}>{taskInformation}</Title>

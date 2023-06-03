@@ -19,6 +19,7 @@ export type TypeResponseJSONObject = {
 export interface ITaskState {
   isLoading: boolean;
   taskName: string;
+  github: string;
   taskInformation: string;
   criteriaResults: TypeCriteria[];
   maxTotalPoints: number;
