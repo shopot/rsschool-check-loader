@@ -1,4 +1,6 @@
-import { withRouter } from './with-router';
 import compose from 'compose-function';
 
-export const withProviders = compose(withRouter);
+import { withRouter } from './with-router';
+import { withTheme } from './with-theme.tsx';
+
+export const withProviders = compose(withRouter, withTheme);
