@@ -1,4 +1,4 @@
-import { Button, Divider, Form, Typography } from 'antd';
+import { Button, Divider, Form, Space, Typography } from 'antd';
 
 import { useTaskStore } from '@/entities/task';
 import { TaskTotalPoints } from '@/feature/task-total-points';
@@ -30,9 +30,11 @@ export const Task = (): JSX.Element => {
       </Form>
       <TaskTotalPoints />
       <Divider />
-      <Button type={'default'} onClick={handleResetTotalPoints}>
-        Reset
-      </Button>
+      <Space align="center" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <Button type={'default'} style={{ width: '200px' }} onClick={handleResetTotalPoints}>
+          Reset
+        </Button>
+      </Space>
     </>
   );
 };
