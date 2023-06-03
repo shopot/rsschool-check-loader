@@ -13,8 +13,6 @@ export const HomePage = (): JSX.Element => {
     !!state.criteriaResults.length,
   ]);
 
-  console.log(isLoading);
-
   return (
     <Layout className={styles.layout}>
       <Layout.Content className={styles.contentStyle}>

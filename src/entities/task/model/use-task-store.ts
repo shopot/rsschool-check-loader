@@ -40,8 +40,6 @@ const taskStore: TypeTaskStore = (set, get) => ({
       .finally(() => {
         set({ isLoading: false });
       });
-
-    console.log('fetching task url:', url);
   },
 
   initTask: (data) => {
