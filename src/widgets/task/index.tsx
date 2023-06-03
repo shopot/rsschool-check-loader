@@ -1,8 +1,8 @@
 import { Button, Divider, Form, Space, Typography } from 'antd';
 
 import { useTaskStore } from '@/entities/task';
-import { TaskTotalPoints } from '@/feature/task-total-points';
-import { TaskCheckList } from '@/feature/task-check-list';
+import { TaskTotalPoints } from '@/features/task-total-points';
+import { TaskCheckList } from '@/features/task-check-list';
 
 export const Task = (): JSX.Element => {
   const { taskName, github, taskInformation } = useTaskStore();

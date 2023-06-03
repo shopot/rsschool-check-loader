@@ -1,4 +1,4 @@
-import { TaskTotalPointsUI } from '@/feature/task-total-points/ui';
+import { TaskTotalPointsUI } from '@/features/task-total-points/ui';
 import { useTaskStore } from '@/entities/task';
 
 export const TaskTotalPoints = (): JSX.Element => {

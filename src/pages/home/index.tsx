@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 import { useTaskStore } from '@/entities/task';
 import { Loader } from '@/shared/ui';
-import { TaskLoaderForm } from '@/feature/task-loader-form';
+import { TaskLoaderForm } from '@/features/task-loader-form';
 import { Task } from '@/widgets/task';
 
 export const HomePage = (): JSX.Element => {
