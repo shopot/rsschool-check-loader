@@ -1,14 +1,9 @@
 import { Col, Form, Row, Switch } from 'antd';
-import { CSSProperties } from 'react';
 
-const rowStyles: CSSProperties = {
-  border: '1px solid #f0f0f0',
-  borderRadius: '4px',
-  padding: '6px 12px',
-  marginBottom: '6px',
-};
+import { rowStyles } from '@/shared/config';
+import { TypeCriteria } from '@/entities/task';
 
-export const CriteriaPenalty = ({ criteria, onChange }: ICriteriaPenaltyProps): JSX.Element => {
+export const CriteriaPenalty = ({ criteria, onChange }: IProps): JSX.Element => {
   const { id, text, max, value } = criteria;
 
   return (
@@ -16,7 +11,8 @@ export const CriteriaPenalty = ({ criteria, onChange }: ICriteriaPenaltyProps): 
       key={id}
       style={{
         ...rowStyles,
-        borderColor: value === max ? 'red' : '#f0f0f0',
+        backgroundColor: value === max ? '#fff1f0' : '#fff',
+        borderColor: value === max ? '#ffccc7' : '#f0f0f0',
       }}
     >
       <Col span={20}>
@@ -26,8 +22,8 @@ export const CriteriaPenalty = ({ criteria, onChange }: ICriteriaPenaltyProps): 
         <Form.Item name={`criteriaPenalty${id}`} style={{ margin: 0 }}>
           <Switch
             size={'small'}
-            defaultChecked={false}
-            onChange={(checked) => onChange(checked, id, max)}
+            checked={value !== 0}
+            onChange={(checked) => onChange(checked, id, max || 0)}
           />
         </Form.Item>
       </Col>
@@ -35,7 +31,7 @@ export const CriteriaPenalty = ({ criteria, onChange }: ICriteriaPenaltyProps): 
   );
 };
 
-interface ICriteriaPenaltyProps {
+interface IProps {
   criteria: TypeCriteria;
   onChange: (checked: boolean, id: number, max: number) => void;
 }

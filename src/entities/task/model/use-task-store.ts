@@ -3,7 +3,7 @@ import { devtools } from 'zustand/middleware';
 
 import { CANCEL_FETCH_TIMEOUT } from '@/shared/config';
 
-import { ITaskState, TypeCriteriaItem, TypeTaskStore } from './types.ts';
+import { ITaskState, TypeCriteria, TypeResponseJSONObject, TypeTaskStore } from './types.ts';
 import { createCriteria, createAbortSignal } from '../lib';
 
 const initialState = {
@@ -30,7 +30,7 @@ const taskStore: TypeTaskStore = (set, get) => ({
 
     fetch(url, { signal })
       .then((data) => data.json())
-      .then((jsonObject: TypeResponseTaskJSON) => {
+      .then((jsonObject: TypeResponseJSONObject) => {
         get().initTask(jsonObject);
       })
       .catch((err) => {
@@ -55,7 +55,7 @@ const taskStore: TypeTaskStore = (set, get) => ({
       set({
         taskName: taskName,
         taskInformation: information,
-        criteriaResults: createCriteria(criteria as TypeCriteriaItem[]),
+        criteriaResults: createCriteria(criteria as TypeCriteria[]),
       });
     } else {
       set({ error: 'Unknown a task from json file' });
