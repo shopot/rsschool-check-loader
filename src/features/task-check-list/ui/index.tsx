@@ -1,7 +1,7 @@
 import { Divider } from 'antd';
 import { Fragment } from 'react';
 
-import { CriteriaPenalty, CriteriaSubtask, TypeCriteria } from '@/entities/task';
+import { CriteriaPenalty, CriteriaSubtask, CriteriaType, TypeCriteria } from '@/entities/task';
 
 export const TaskCheckListUI = ({
   criteria,
@@ -13,15 +13,15 @@ export const TaskCheckListUI = ({
   const list = criteria.map((criteriaItem) => {
     const { type, id, title } = criteriaItem;
 
-    if (type === 'title') {
+    if (type === CriteriaType.Title) {
       return <Divider key={id}> {title}</Divider>;
-    } else if (type === 'subtask') {
+    } else if (type === CriteriaType.Subtask) {
       return <CriteriaSubtask key={id} criteria={criteriaItem} onChange={onSubtaskChange} />;
-    } else if (type === 'penalty') {
+    } else if (type === CriteriaType.Penalty) {
       let penaltyTitle: JSX.Element | null = null;
 
       if (!isPenaltyTitleShowed) {
-        penaltyTitle = <Divider key="penalty">Penalty</Divider>;
+        penaltyTitle = <Divider>Penalty</Divider>;
         isPenaltyTitleShowed = true;
       }
 
