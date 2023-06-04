@@ -1,8 +1,14 @@
 import { StateCreator } from 'zustand';
 
+export const enum CriteriaType {
+  Title = 'title',
+  Subtask = 'subtask',
+  Penalty = 'penalty',
+}
+
 export type TypeCriteria = {
   id: number;
-  type: string;
+  type: CriteriaType;
   title?: string;
   text?: string;
   max?: number;
