@@ -1,12 +1,12 @@
 {
-  "name": "rs-school-check-loader",
+  "name": "rsschool-check-loader",
   "version": "1.0.0",
   "type": "module",
   "description": "Rolling Scopes School cross-check form loader",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "rs-school-check-loader"
+    "url": "https://github.com/shopot/rsschool-check-loader"
   },
   "scripts": {
     "dev": "vite",
