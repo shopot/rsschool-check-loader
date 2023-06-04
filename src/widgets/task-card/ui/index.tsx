@@ -4,7 +4,7 @@ import { useTaskStore } from '@/entities/task';
 import { ResetForm } from '@/features/reset-form';
 import { TotalPoints } from '@/shared/ui';
 
-export const TaskCard = ({ children }: IProps): JSX.Element => {
+export const TaskCard = ({ slotCheckList }: IProps): JSX.Element => {
   const { taskName, github, taskInformation } = useTaskStore();
   const [form] = Form.useForm();
 
@@ -21,7 +21,7 @@ export const TaskCard = ({ children }: IProps): JSX.Element => {
       <Divider />
       <TotalPoints points={totalPoints} />
       <Title level={5}>{taskInformation}</Title>
-      <Form form={form}>{children}</Form>
+      <Form form={form}>{slotCheckList}</Form>
       <TotalPoints points={totalPoints} />
       <Divider />
       <ResetForm form={form} />
@@ -30,5 +30,5 @@ export const TaskCard = ({ children }: IProps): JSX.Element => {
 };
 
 interface IProps {
-  children?: JSX.Element;
+  slotCheckList?: JSX.Element;
 }

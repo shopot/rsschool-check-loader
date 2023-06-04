@@ -20,11 +20,7 @@ export const HomePage = (): JSX.Element => {
         <Typography.Title style={{ textAlign: 'center' }}>RS School cross-check</Typography.Title>
         <TaskLoader />
         {isLoading && <Loader />}
-        {!isLoading && loadedIn && (
-          <TaskCard>
-            <CheckList />
-          </TaskCard>
-        )}
+        {!isLoading && loadedIn && <TaskCard slotCheckList={<CheckList />} />}
       </Layout.Content>
     </Layout>
   );
