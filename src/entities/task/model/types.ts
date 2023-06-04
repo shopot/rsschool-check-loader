@@ -12,6 +12,7 @@ export type TypeCriteria = {
   title?: string;
   text?: string;
   max?: number;
+  input: boolean;
   value: number;
 };
 

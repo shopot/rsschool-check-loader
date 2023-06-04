@@ -2,9 +2,9 @@ import { Col, Form, InputNumber, Row } from 'antd';
 import { DeleteTwoTone, LikeTwoTone } from '@ant-design/icons';
 
 import { rowStyles } from '@/shared/config';
-import { TypeCriteria } from '@/entities/task';
+import { TypeCriteria } from '../../model';
 
-export const CriteriaSubtask = ({ criteria, onChange }: ICriteriaSubtaskProps): JSX.Element => {
+export const SubtaskInput = ({ criteria, onChange }: ICriteriaSubtaskProps): JSX.Element => {
   const form = Form.useFormInstance();
 
   const { id, text, max, value } = criteria;

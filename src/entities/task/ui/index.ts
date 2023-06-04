@@ -1,2 +1,2 @@
-export { CriteriaSubtask } from './criteria-subtask';
-export { CriteriaPenalty } from './criteria-penalty';
+export { SubtaskInput } from './subtask-input';
+export { PenaltySwitch } from './penalty-switch';

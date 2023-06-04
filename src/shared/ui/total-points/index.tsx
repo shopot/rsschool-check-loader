@@ -1,6 +1,6 @@
 import { Typography } from 'antd';
 
-export const TaskTotalPointsUI = ({ points }: IProps): JSX.Element => {
+export const TotalPoints = ({ points }: IProps): JSX.Element => {
   const { Title } = Typography;
 
   return (
