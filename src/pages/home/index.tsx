@@ -1,9 +1,5 @@
-import { Layout, Typography } from 'antd';
-
-import styles from './styles.module.scss';
-
 import { useTaskStore } from '@/entities/task';
-import { Loader } from '@/shared/ui';
+import { LayoutPage, Loader } from '@/shared/ui';
 import { TaskLoader } from '@/features/task-loader';
 import { TaskCard } from '@/widgets/task-card';
 import { CheckList } from '@/widgets/check-list';
@@ -15,13 +11,15 @@ export const HomePage = (): JSX.Element => {
   ]);
 
   return (
-    <Layout className={styles.layout}>
-      <Layout.Content className={styles.contentStyle}>
-        <Typography.Title style={{ textAlign: 'center' }}>RS School cross-check</Typography.Title>
-        <TaskLoader />
-        {isLoading && <Loader />}
-        {!isLoading && loadedIn && <TaskCard slotCheckList={<CheckList />} />}
-      </Layout.Content>
-    </Layout>
+    <LayoutPage
+      slotTitle="RS School cross-check"
+      slotContent={
+        <>
+          <TaskLoader />
+          {isLoading && <Loader />}
+          {!isLoading && loadedIn && <TaskCard slotCheckList={<CheckList />} />}
+        </>
+      }
+    />
   );
 };
