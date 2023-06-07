@@ -55,8 +55,6 @@ npm run dev
 
 Licensed under the MIT license.
 
-***
-
 ![GitHub top language](https://img.shields.io/badge/TypeScript-71.6%25-blue)
 [![React](https://img.shields.io/badge/Powered%20By-React-149eca)](https://react.dev)
 [![FeatureSliced](https://img.shields.io/badge/Powered%20by-%F0%9F%8D%B0%20Feature%20Sliced-%235c9cb5)](https://feature-sliced.design/)
