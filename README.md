@@ -1,18 +1,22 @@
-<h1 align="center">Rolling Scopes School cross-check form loader</h1>
+# Rolling Scopes School cross-check form loader
 
-<p align="center">
-<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/typescript-icon.svg" alt="TypeScript">
-<img height="40" src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/react.svg" alt="React">
-<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/ant-design.svg" alt="Ant Design">
-<img height="40" src="./src/assets/zustand.png" alt="Zustand">
-<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/prettier.svg" alt="Prettier">
-<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/eslint.svg" alt="ESLint">
-<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/vitejs.svg" alt="Vite">
-<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/sass.svg" alt="SASS">
-<img height="40" src="https://avatars.githubusercontent.com/u/60469024?s=200&v=4" alt="Feature-Sliced Design">
-</p>
+
+<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/typescript-icon.svg" alt="TypeScript" title="TypeScript">
+<img height="40" src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/react.svg" alt="React" title="React">
+<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/ant-design.svg" alt="Ant Design" title="Ant Design">
+<img height="40" src="./src/assets/zustand.png" alt="Zustand" title="Zustand">
+<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/prettier.svg" alt="Prettier" title="Prettier">
+<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/eslint.svg" alt="ESLint" title="ESLint">
+<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/vitejs.svg" alt="Vite" title="Vite">
+<img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/sass.svg" alt="SASS" title="SASS">
+<img height="40" src="./src/assets/fsd.png" alt="Feature-Sliced Design" title="Feature-Sliced Design">
 
 An open source frontend application built using the **React** and **Feature-Sliced Design**.
+
+![GitHub top language](https://img.shields.io/badge/TypeScript-71.6%25-blue)
+[![React](https://img.shields.io/badge/Powered%20By-React-149eca)](https://react.dev)
+[![FeatureSliced](https://img.shields.io/badge/Powered%20by-%F0%9F%8D%B0%20Feature%20Sliced-%235c9cb5)](https://feature-sliced.design/)
+
 
 > This app is a work in progress.
 
@@ -54,7 +58,3 @@ npm run dev
 ## License
 
 Licensed under the MIT license.
-
-![GitHub top language](https://img.shields.io/badge/TypeScript-71.6%25-blue)
-[![React](https://img.shields.io/badge/Powered%20By-React-149eca)](https://react.dev)
-[![FeatureSliced](https://img.shields.io/badge/Powered%20by-%F0%9F%8D%B0%20Feature%20Sliced-%235c9cb5)](https://feature-sliced.design/)
