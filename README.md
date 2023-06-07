@@ -1,6 +1,6 @@
 # Rolling Scopes School cross-check form loader
 
-
+<p>
 <img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/typescript-icon.svg" alt="TypeScript" title="TypeScript">
 <img height="40" src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/react.svg" alt="React" title="React">
 <img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/ant-design.svg" alt="Ant Design" title="Ant Design">
@@ -10,6 +10,7 @@
 <img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/vitejs.svg" alt="Vite" title="Vite">
 <img height="40" src="https://github.com/gilbarbara/logos/raw/main/logos/sass.svg" alt="SASS" title="SASS">
 <img height="40" src="./src/assets/fsd.png" alt="Feature-Sliced Design" title="Feature-Sliced Design">
+</p>
 
 An open source frontend application built using the **React** and **Feature-Sliced Design**.
 
