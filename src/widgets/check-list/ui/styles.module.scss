@@ -1,0 +1,12 @@
+.criteriaTitle {
+  text-align: center;
+
+  span {
+    a {
+      font-weight: 400;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

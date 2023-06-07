@@ -1,4 +1,2 @@
-export const CANCEL_FETCH_TIMEOUT = 5000;
-
-export const TASK_JSON_URL =
-  'https://raw.githubusercontent.com/rolling-scopes-school/checklist/master/active-tasks/react_graphiql.json';
+export const CHECKLIST_ACTIVE_TASK_URL =
+  'https://api.github.com/repos/rolling-scopes-school/checklist/contents/active-tasks';

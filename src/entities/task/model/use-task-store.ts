@@ -1,10 +1,9 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-import { CANCEL_FETCH_TIMEOUT } from '@/shared/config';
-
+import { createAbortSignal } from '@/shared/lib';
 import { ITaskState, TypeCriteria, TypeResponseJSONObject, TypeTaskStore } from './types.ts';
-import { createCriteria, createAbortSignal } from '../lib';
+import { createCriteria } from '../lib';
 
 const initialState = {
   isLoading: false,
@@ -27,7 +26,7 @@ const taskStore: TypeTaskStore = (set, get) => ({
 
     set({ isLoading: true });
 
-    const signal = createAbortSignal(CANCEL_FETCH_TIMEOUT);
+    const signal = createAbortSignal();
 
     fetch(url, { signal })
       .then((data) => data.json())
@@ -50,11 +49,11 @@ const taskStore: TypeTaskStore = (set, get) => ({
 
     const { taskName, criteria, information, github } = data;
 
-    if (taskName && criteria && information && github) {
+    if (taskName && criteria) {
       set({
         taskName: taskName,
-        github: github,
-        taskInformation: information,
+        github: github || '',
+        taskInformation: information || '',
         criteriaResults: createCriteria(criteria as TypeCriteria[]),
       });
     } else {
