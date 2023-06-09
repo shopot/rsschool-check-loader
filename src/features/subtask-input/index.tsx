@@ -23,6 +23,8 @@ export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
     form.setFieldValue(fieldName, value);
   };
 
+  const textSlotString = linkifyText(text || '');
+
   const buttonBefore = isDone ? (
     <ButtonBefore variant="delete" onClick={() => updateSubtask(id, 0)} />
   ) : (
@@ -41,9 +43,7 @@ export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
     </>
   );
 
-  return (
-    <Subtask isDone={isDone} textSlot={linkifyText(text || '')} inputSlot={inputSlotComponent} />
-  );
+  return <Subtask isDone={isDone} textSlot={textSlotString} inputSlot={inputSlotComponent} />;
 };
 
 interface SubtaskInputProps {

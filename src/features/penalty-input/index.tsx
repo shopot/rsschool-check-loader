@@ -16,7 +16,9 @@ export const PenaltyInput = ({ criteria }: PenaltyInputProps) => {
   const handleInputChange = (value: number) => setCriteriaPoints(id, value);
   const handleSwitchChange = (checked: boolean) => setCriteriaPoints(id, checked ? maxValue : 0);
 
-  const textSlot = maxValue !== 0 ? `${text || ''} (${maxValue} points)` : text || '';
+  const textSlotString = linkifyText(
+    maxValue !== 0 ? `${text || ''} (${maxValue} points)` : text || ''
+  );
 
   // Criteria input or switch
   const inputSlotComponent = criteria.input ? (
@@ -25,9 +27,7 @@ export const PenaltyInput = ({ criteria }: PenaltyInputProps) => {
     <Switch fieldName={fieldName} value={value} onChange={handleSwitchChange} />
   );
 
-  return (
-    <Penalty isDone={isDone} textSlot={linkifyText(textSlot)} inputSlot={inputSlotComponent} />
-  );
+  return <Penalty isDone={isDone} textSlot={textSlotString} inputSlot={inputSlotComponent} />;
 };
 
 interface PenaltyInputProps {
