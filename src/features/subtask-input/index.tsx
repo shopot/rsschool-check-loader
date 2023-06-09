@@ -25,18 +25,17 @@ export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
 
   const textSlotString = linkifyText(text || '');
 
-  const buttonBefore = isDone ? (
-    <ButtonBefore variant="delete" onClick={() => updateSubtask(id, 0)} />
-  ) : (
-    <ButtonBefore variant="like" onClick={() => updateSubtask(id, maxValue)} />
-  );
-
   const inputSlotComponent = (
     <>
       {`Max points ${maxValue}`}
       <InputNumber
         fieldName={fieldName}
-        buttonBefore={buttonBefore}
+        buttonBefore={
+          <ButtonBefore
+            variant={isDone ? 'delete' : 'like'}
+            onClick={() => updateSubtask(id, isDone ? 0 : maxValue)}
+          />
+        }
         max={maxValue}
         onChange={(value) => setCriteriaPoints(id, value || 0)}
       />
