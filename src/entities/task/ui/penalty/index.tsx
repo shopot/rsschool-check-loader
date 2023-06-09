@@ -2,7 +2,7 @@ import { Col, Row } from 'antd';
 
 import styles from './styles.module.scss';
 
-export const Penalty = ({ isDone, textSlot, inputSlot }: IProps): JSX.Element => {
+export const Penalty = ({ isDone, textSlot, inputSlot }: PenaltyProps): JSX.Element => {
   const backgroundColor = isDone ? '#fff1f0' : '#fff';
 
   const borderColor = isDone ? '#ffccc7' : '#f0f0f0';
@@ -20,7 +20,7 @@ export const Penalty = ({ isDone, textSlot, inputSlot }: IProps): JSX.Element =>
   );
 };
 
-interface IProps {
+interface PenaltyProps {
   isDone: boolean;
   textSlot: string;
   inputSlot: JSX.Element;

@@ -10,16 +10,15 @@ export const HomePage = (): JSX.Element => {
     !!state.criteriaResults.length,
   ]);
 
-  return (
-    <LayoutPage
-      slotTitle="RS School cross-check"
-      slotContent={
-        <>
-          <TaskLoader />
-          {isLoading && <Loader />}
-          {!isLoading && loadedIn && <TaskCard slotCheckList={<CheckList />} />}
-        </>
-      }
-    />
+  const title = 'RS School cross-check';
+
+  const content = (
+    <>
+      <TaskLoader />
+      {isLoading && <Loader />}
+      {!isLoading && loadedIn && <TaskCard slotCheckList={<CheckList />} />}
+    </>
   );
+
+  return <LayoutPage slotTitle={title} slotContent={content} />;
 };

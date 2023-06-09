@@ -3,7 +3,7 @@ import { Form } from 'antd';
 import { Subtask, TypeCriteria, useTaskStore } from '@/entities/task';
 import { InputNumber, ButtonBefore } from './ui';
 
-export const SubtaskInput = ({ criteria }: IProps) => {
+export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
   const form = Form.useFormInstance();
 
   const setCriteriaPoints = useTaskStore((state) => state.setCriteriaPoints);
@@ -43,6 +43,6 @@ export const SubtaskInput = ({ criteria }: IProps) => {
   return <Subtask isDone={isDone} textSlot={text || ''} inputSlot={inputSlotComponent} />;
 };
 
-interface IProps {
+interface SubtaskInputProps {
   criteria: TypeCriteria;
 }

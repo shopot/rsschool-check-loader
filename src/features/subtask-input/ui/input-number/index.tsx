@@ -2,7 +2,12 @@ import { Form, Space, InputNumber as AntdInputNumber } from 'antd';
 
 import styles from './styles.module.scss';
 
-export const InputNumber = ({ fieldName, buttonBefore, max, onChange }: IProps): JSX.Element => {
+export const InputNumber = ({
+  fieldName,
+  buttonBefore,
+  max,
+  onChange,
+}: InputNumberProps): JSX.Element => {
   return (
     <Space.Compact size="small" className={styles.spaceCompact}>
       {buttonBefore}
@@ -19,7 +24,7 @@ export const InputNumber = ({ fieldName, buttonBefore, max, onChange }: IProps):
   );
 };
 
-interface IProps {
+interface InputNumberProps {
   fieldName: string;
   buttonBefore: JSX.Element;
   max: number;

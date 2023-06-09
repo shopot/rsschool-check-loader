@@ -11,6 +11,8 @@ import { PenaltyInput } from '@/features/penalty-input';
 export const CheckList = (): JSX.Element => {
   const { criteriaResults } = useTaskStore();
 
+  const { Title } = Typography;
+
   let isPenaltyTitleShowed = false;
 
   const list = criteriaResults.map((criteriaItem) => {
@@ -19,9 +21,9 @@ export const CheckList = (): JSX.Element => {
     if (type === CriteriaType.Title) {
       if (title !== undefined) {
         return (
-          <Typography.Title key={id} level={5} className={styles.criteriaTitle}>
+          <Title key={id} level={5} className={styles.criteriaTitle}>
             <span dangerouslySetInnerHTML={{ __html: linkifyText(title) }} />
-          </Typography.Title>
+          </Title>
         );
       }
 

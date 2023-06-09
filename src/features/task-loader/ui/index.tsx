@@ -22,14 +22,9 @@ export const TaskLoader = (): JSX.Element => {
     fetchChecklist(CHECKLIST_ACTIVE_TASK_URL);
   }, [fetchChecklist]);
 
-  const handleChange = (value: string) => {
-    setDownloadUrl(value);
-  };
+  const handleChange = (value: string) => setDownloadUrl(value);
 
-  const handleLoadChecklist = () => {
-    console.log(downloadUrl);
-    fetchTask(downloadUrl);
-  };
+  const handleLoadChecklist = () => fetchTask(downloadUrl);
 
   return (
     <Space.Compact className={styles.spaceCompact}>

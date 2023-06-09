@@ -2,7 +2,7 @@ import { Typography } from 'antd';
 
 import styles from './styles.module.scss';
 
-export const TotalPoints = ({ points }: IProps): JSX.Element => {
+export const TotalPoints = ({ points }: TotalPointsProps): JSX.Element => {
   const { Title } = Typography;
 
   const pointsClass = points > 0 ? styles.fill : styles.empty;
@@ -14,6 +14,6 @@ export const TotalPoints = ({ points }: IProps): JSX.Element => {
   );
 };
 
-interface IProps {
+interface TotalPointsProps {
   points: number;
 }

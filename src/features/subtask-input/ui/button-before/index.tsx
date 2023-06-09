@@ -3,7 +3,7 @@ import { Button } from 'antd';
 
 import styles from './styles.module.scss';
 
-export const ButtonBefore = ({ variant, onClick }: IProps): JSX.Element => {
+export const ButtonBefore = ({ variant, onClick }: ButtonBeforeProps): JSX.Element => {
   const color = variant === 'like' ? '#52c41a' : '#FF0000';
 
   const ButtonIcon = variant === 'like' ? LikeTwoTone : DeleteTwoTone;
@@ -16,7 +16,7 @@ export const ButtonBefore = ({ variant, onClick }: IProps): JSX.Element => {
   );
 };
 
-interface IProps {
+interface ButtonBeforeProps {
   variant: string;
   onClick: () => void;
 }

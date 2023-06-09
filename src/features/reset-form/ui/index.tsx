@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 import { useTaskStore } from '@/entities/task';
 
-export const ResetForm = ({ form }: IProps): JSX.Element => {
+export const ResetForm = ({ form }: ResetFormProps): JSX.Element => {
   const handleResetTotalPoints = () => {
     useTaskStore.getState().resetTotalPoints();
 
@@ -20,6 +20,6 @@ export const ResetForm = ({ form }: IProps): JSX.Element => {
   );
 };
 
-interface IProps {
+interface ResetFormProps {
   form: FormInstance;
 }

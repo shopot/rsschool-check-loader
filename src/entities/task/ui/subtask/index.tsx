@@ -2,7 +2,7 @@ import { Col, Row } from 'antd';
 
 import styles from './styles.module.scss';
 
-export const Subtask = ({ isDone, textSlot, inputSlot }: IProps): JSX.Element => {
+export const Subtask = ({ isDone, textSlot, inputSlot }: SubtaskProps): JSX.Element => {
   const backgroundColor = isDone ? '#fff' : '#fff7e6';
 
   return (
@@ -15,7 +15,7 @@ export const Subtask = ({ isDone, textSlot, inputSlot }: IProps): JSX.Element =>
   );
 };
 
-interface IProps {
+interface SubtaskProps {
   isDone: boolean;
   textSlot: string;
   inputSlot: JSX.Element;

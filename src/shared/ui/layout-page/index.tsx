@@ -1,16 +1,19 @@
-import styles from './styles.module.scss';
 import { Typography } from 'antd';
 
-export const LayoutPage = ({ slotTitle, slotContent }: IProps): JSX.Element => {
+import styles from './styles.module.scss';
+
+export const LayoutPage = ({ slotTitle, slotContent }: LayoutPageProps): JSX.Element => {
+  const { Title } = Typography;
+
   return (
     <>
-      <Typography.Title className={styles.title}>{slotTitle}</Typography.Title>
+      <Title className={styles.title}>{slotTitle}</Title>
       {slotContent}
     </>
   );
 };
 
-interface IProps {
+interface LayoutPageProps {
   slotTitle: string;
   slotContent: JSX.Element;
 }
