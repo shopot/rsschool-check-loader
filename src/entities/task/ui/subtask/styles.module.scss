@@ -8,3 +8,14 @@
 .col {
   text-align: right;
 }
+
+.textSlot {
+  span {
+    a {
+      font-weight: 400;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ export const Subtask = ({ isDone, textSlot, inputSlot }: SubtaskProps): JSX.Elem
 
   return (
     <Row className={styles.row} style={{ backgroundColor: backgroundColor }}>
-      <Col span={20}>
+      <Col span={20} className={styles.textSlot}>
         <span dangerouslySetInnerHTML={{ __html: textSlot }} />
       </Col>
       <Col span={4} className={styles.col}>
