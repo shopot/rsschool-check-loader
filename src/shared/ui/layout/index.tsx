@@ -1,8 +1,9 @@
-import styles from './styles.module.scss';
 import { Layout as AntdLayout } from 'antd';
 import { Outlet } from 'react-router-dom';
 
-export const Layout = ({ slotFooter }: IProps) => (
+import styles from './styles.module.scss';
+
+export const Layout = ({ slotFooter }: LayoutProps) => (
   <AntdLayout className={styles.layout}>
     <AntdLayout.Content className={styles.content}>
       <Outlet />
@@ -11,6 +12,6 @@ export const Layout = ({ slotFooter }: IProps) => (
   </AntdLayout>
 );
 
-interface IProps {
+interface LayoutProps {
   slotFooter: JSX.Element;
 }
