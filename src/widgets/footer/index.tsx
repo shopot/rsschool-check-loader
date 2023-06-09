@@ -6,7 +6,7 @@ import angularLogo from '@/assets/angular-icon.svg';
 import reactLogo from '@/assets/react-icon.svg';
 import nodejsLogo from '@/assets/nodejs-icon.svg';
 
-export const LayoutFooter = (): JSX.Element => {
+export const Footer = (): JSX.Element => {
   return (
     <Space
       direction="vertical"

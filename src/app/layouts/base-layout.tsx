@@ -1,4 +1,4 @@
 import { Layout } from '@/shared/ui';
-import { LayoutFooter } from '@/widgets/layout-footer';
+import { Footer } from '@/widgets/footer';
 
-export const BaseLayout = () => <Layout slotFooter={<LayoutFooter />} />;
+export const BaseLayout = () => <Layout slotFooter={<Footer />} />;
