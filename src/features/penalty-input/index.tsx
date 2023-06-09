@@ -1,5 +1,6 @@
 import { Penalty, TypeCriteria, useTaskStore } from '@/entities/task';
 import { InputNumber, Switch } from './ui';
+import { linkifyText } from '@/shared/lib';
 
 export const PenaltyInput = ({ criteria }: PenaltyInputProps) => {
   const setCriteriaPoints = useTaskStore((state) => state.setCriteriaPoints);
@@ -24,7 +25,9 @@ export const PenaltyInput = ({ criteria }: PenaltyInputProps) => {
     <Switch fieldName={fieldName} value={value} onChange={handleSwitchChange} />
   );
 
-  return <Penalty isDone={isDone} textSlot={textSlot} inputSlot={inputSlotComponent} />;
+  return (
+    <Penalty isDone={isDone} textSlot={linkifyText(textSlot)} inputSlot={inputSlotComponent} />
+  );
 };
 
 interface PenaltyInputProps {

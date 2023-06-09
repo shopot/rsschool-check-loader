@@ -2,6 +2,7 @@ import { Form } from 'antd';
 
 import { Subtask, TypeCriteria, useTaskStore } from '@/entities/task';
 import { InputNumber, ButtonBefore } from './ui';
+import { linkifyText } from '@/shared/lib';
 
 export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
   const form = Form.useFormInstance();
@@ -40,7 +41,9 @@ export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
     </>
   );
 
-  return <Subtask isDone={isDone} textSlot={text || ''} inputSlot={inputSlotComponent} />;
+  return (
+    <Subtask isDone={isDone} textSlot={linkifyText(text || '')} inputSlot={inputSlotComponent} />
+  );
 };
 
 interface SubtaskInputProps {

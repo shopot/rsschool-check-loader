@@ -12,7 +12,9 @@ export const Penalty = ({ isDone, textSlot, inputSlot }: PenaltyProps): JSX.Elem
       className={styles.row}
       style={{ backgroundColor: backgroundColor, borderColor: borderColor }}
     >
-      <Col span={20}>{textSlot}</Col>
+      <Col span={20}>
+        <span dangerouslySetInnerHTML={{ __html: textSlot }} />
+      </Col>
       <Col span={4} className={styles.col}>
         {inputSlot}
       </Col>
