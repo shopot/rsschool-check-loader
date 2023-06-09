@@ -5,10 +5,7 @@ import { CheckList } from '@/widgets/check-list';
 import { useTaskStore } from '@/entities/task';
 
 export const HomePage = (): JSX.Element => {
-  const [isLoading, loadedIn] = useTaskStore((state) => [
-    state.isLoading,
-    !!state.criteriaResults.length,
-  ]);
+  const [isLoading] = useTaskStore((state) => [state.isLoading]);
 
   const title = 'RS School cross-check';
 
@@ -16,7 +13,7 @@ export const HomePage = (): JSX.Element => {
     <>
       <TaskLoader />
       {isLoading && <Loader />}
-      {!isLoading && loadedIn && <TaskCard slotCheckList={<CheckList />} />}
+      {!isLoading && <TaskCard slotCheckList={<CheckList />} />}
     </>
   );
 

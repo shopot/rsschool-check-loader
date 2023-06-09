@@ -49,12 +49,12 @@ const taskStore: TypeTaskStore = (set, get) => ({
 
     const { taskName, criteria, information, github } = data;
 
-    if (taskName && criteria) {
+    if (taskName) {
       set({
         taskName: taskName,
         github: github || '',
         taskInformation: information || '',
-        criteriaResults: createCriteria(criteria as TypeCriteria[]),
+        criteriaResults: createCriteria((criteria as TypeCriteria[]) || []),
       });
     } else {
       set({ error: 'Unknown a task from json file' });

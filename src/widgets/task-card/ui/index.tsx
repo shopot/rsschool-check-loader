@@ -6,8 +6,10 @@ import { TotalPoints } from '@/shared/ui';
 import { linkifyText } from '@/shared/lib';
 
 export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
-  const { taskName, github, taskInformation } = useTaskStore();
   const [form] = Form.useForm();
+  const { taskName, github, taskInformation } = useTaskStore();
+
+  const isChecklistEmpty = useTaskStore((state) => state.criteriaResults.length === 0);
 
   const totalPoints = useTaskStore.getState().totalPoints();
 
@@ -20,14 +22,20 @@ export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
         {github}
       </a>
       <Divider />
-      <TotalPoints points={totalPoints} />
-      <Paragraph>
-        <span dangerouslySetInnerHTML={{ __html: linkifyText(taskInformation) }} />
-      </Paragraph>
-      <Form form={form}>{slotCheckList}</Form>
-      <TotalPoints points={totalPoints} />
-      <Divider />
-      <ResetForm form={form} />
+      {isChecklistEmpty ? (
+        <Title level={5}>There is no data for this task!</Title>
+      ) : (
+        <>
+          <TotalPoints points={totalPoints} />
+          <Paragraph>
+            <span dangerouslySetInnerHTML={{ __html: linkifyText(taskInformation) }} />
+          </Paragraph>
+          <Form form={form}>{slotCheckList}</Form>
+          <TotalPoints points={totalPoints} />
+          <Divider />
+          <ResetForm form={form} />
+        </>
+      )}
     </>
   );
 };
