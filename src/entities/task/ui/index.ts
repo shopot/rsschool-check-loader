@@ -1,2 +1,2 @@
-export { SubtaskInput } from './subtask-input';
-export { PenaltySwitch } from './penalty-switch';
+export { Subtask } from './subtask';
+export { Penalty } from './penalty';

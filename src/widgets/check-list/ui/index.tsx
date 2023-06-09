@@ -3,23 +3,13 @@ import { Fragment } from 'react';
 
 import styles from './styles.module.scss';
 
-import { PenaltySwitch, SubtaskInput, CriteriaType, useTaskStore } from '@/entities/task';
+import { CriteriaType, useTaskStore } from '@/entities/task';
 import { linkifyText } from '@/shared/lib';
+import { SubtaskInput } from '@/features/subtask-input';
+import { PenaltyInput } from '@/features/penalty-input';
 
 export const CheckList = (): JSX.Element => {
-  const { criteriaResults, setCriteriaPoints } = useTaskStore();
-
-  const handleSubtaskChange = (id: number, value: number): void => {
-    setCriteriaPoints(id, value);
-  };
-
-  const handlePenaltyChange = (checked: boolean, id: number, max: number): void => {
-    if (checked) {
-      setCriteriaPoints(id, max);
-    } else {
-      setCriteriaPoints(id, 0);
-    }
-  };
+  const { criteriaResults } = useTaskStore();
 
   let isPenaltyTitleShowed = false;
 
@@ -37,7 +27,7 @@ export const CheckList = (): JSX.Element => {
 
       return null;
     } else if (type === CriteriaType.Subtask) {
-      return <SubtaskInput key={id} criteria={criteriaItem} onChange={handleSubtaskChange} />;
+      return <SubtaskInput key={id} criteria={criteriaItem} />;
     } else if (type === CriteriaType.Penalty) {
       let penaltyTitle: JSX.Element | null = null;
 
@@ -49,7 +39,7 @@ export const CheckList = (): JSX.Element => {
       return (
         <Fragment key={id}>
           {penaltyTitle !== null && penaltyTitle}
-          <PenaltySwitch criteria={criteriaItem} onChange={handlePenaltyChange} />
+          <PenaltyInput criteria={criteriaItem} />
         </Fragment>
       );
     }

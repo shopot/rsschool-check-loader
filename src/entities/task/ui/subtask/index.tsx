@@ -1,0 +1,22 @@
+import { Col, Row } from 'antd';
+
+import styles from './styles.module.scss';
+
+export const Subtask = ({ isDone, textSlot, inputSlot }: IProps): JSX.Element => {
+  const backgroundColor = isDone ? '#fff' : '#fff7e6';
+
+  return (
+    <Row className={styles.row} style={{ backgroundColor: backgroundColor }}>
+      <Col span={20}>{textSlot}</Col>
+      <Col span={4} className={styles.col}>
+        {inputSlot}
+      </Col>
+    </Row>
+  );
+};
+
+interface IProps {
+  isDone: boolean;
+  textSlot: string;
+  inputSlot: JSX.Element;
+}
