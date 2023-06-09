@@ -15,6 +15,10 @@ export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
 
   const { Title, Paragraph } = Typography;
 
+  if (taskName === '' && isChecklistEmpty) {
+    return <Paragraph className="text-center">Checklist is not loaded!</Paragraph>;
+  }
+
   return (
     <>
       <Title level={4}>Task name: {taskName}</Title>
