@@ -31,9 +31,11 @@ export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
       ) : (
         <>
           <TotalPoints points={totalPoints} />
-          <TaskInformation>
-            <span dangerouslySetInnerHTML={{ __html: linkifyText(taskInformation) }} />
-          </TaskInformation>
+          {taskInformation.trim().length > 0 && (
+            <TaskInformation>
+              <span dangerouslySetInnerHTML={{ __html: linkifyText(taskInformation) }} />
+            </TaskInformation>
+          )}
           <Form form={form}>{slotCheckList}</Form>
           <TotalPoints points={totalPoints} />
           <Divider />
