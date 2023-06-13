@@ -7,9 +7,9 @@ const getChecklist = async (url: string): Promise<JSONValue | null> => {
 
     const response = await fetch(url, {
       signal,
-      headers: new Headers({
+      headers: {
         Authorization: 'Bearer ' + PUBLIC_API_GITHUB_TOKEN,
-      }),
+      },
     });
 
     if (response.ok) {
