@@ -16,7 +16,7 @@ export interface IChecklistState {
   isLoading: boolean;
   results: TypeChecklist[];
   error: string;
-  fetchChecklist: (url: string) => void;
+  fetchChecklist: (url: string | string[]) => Promise<void>;
 }
 
 export type TypeChecklistStore = StateCreator<IChecklistState>;

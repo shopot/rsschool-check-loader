@@ -1,39 +1,52 @@
 import { devtools } from 'zustand/middleware';
 import { create } from 'zustand';
 
-import { createAbortSignal } from '@/shared/lib';
-import { IChecklistState, TypeChecklistStore, TypeResponseChecklistObject } from './types.ts';
+import {
+  IChecklistState,
+  TypeChecklist,
+  TypeChecklistStore,
+  TypeResponseChecklistObject,
+} from './types.ts';
 import { createChecklist } from '../lib';
+import { API } from '@/shared/api';
 
-const checklistStore: TypeChecklistStore = (set, get) => ({
+const checklistStore: TypeChecklistStore = (set) => ({
   isLoading: false,
 
   results: [],
 
   error: '',
 
-  fetchChecklist: (url: string): void => {
-    if (get().results.length > 0) {
-      return;
-    }
-
+  fetchChecklist: async (url: string | string[]): Promise<void> => {
     set({ isLoading: true });
 
-    const signal = createAbortSignal();
+    const urlList: string[] = [];
 
-    fetch(url, { signal })
-      .then((response) => response.json())
-      .then((data: TypeResponseChecklistObject[]) => {
-        const results = createChecklist(data);
+    if (Array.isArray(url)) {
+      urlList.push(...url);
+    } else {
+      urlList.push(url);
+    }
 
-        set({ results });
-      })
-      .catch((error) => {
-        set({ error: (error as Error).message });
-      })
-      .finally(() => {
-        set({ isLoading: false });
-      });
+    let results: TypeChecklist[] = [];
+
+    for (const _url of urlList) {
+      const data = await API.checklist.getChecklist(_url);
+
+      if (data !== null) {
+        const checklist = createChecklist(data as TypeResponseChecklistObject[]);
+
+        if (checklist.length > 0) {
+          results = results.concat(checklist);
+        }
+      }
+    }
+
+    if (results.length > 0) {
+      set({ results });
+    }
+
+    set({ isLoading: false });
   },
 });
 
