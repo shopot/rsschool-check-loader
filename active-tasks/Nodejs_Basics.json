@@ -47,7 +47,7 @@
     },
     {
       "type": "title",
-      "title": "Command line interface(src/cli) (max 12 points)"
+      "title": "Command line interface (src/cli) (max 12 points)"
     },
     {
       "type": "subtask",
@@ -61,7 +61,7 @@
     },
     {
       "type": "title",
-      "title": "Command line interface (src/cli) (max 20 points)"
+      "title": "Modules(src/modules) (max 20 points)"
     },
     {
       "type": "subtask",
