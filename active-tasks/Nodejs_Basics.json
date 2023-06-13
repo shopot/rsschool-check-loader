@@ -134,17 +134,17 @@
     },
     {
       "type": "subtask",
-      "text": "spawns child process",
+      "text": "Spawns child process",
       "max": 10
     },
     {
       "type": "subtask",
-      "text": "child process stdin receives input from master process stdin",
+      "text": "Child process stdin receives input from master process stdin",
       "max": 10
     },
     {
       "type": "subtask",
-      "text": "child process stdout sends data to master process stdout",
+      "text": "Child process stdout sends data to master process stdout",
       "max": 10
     },
     {
