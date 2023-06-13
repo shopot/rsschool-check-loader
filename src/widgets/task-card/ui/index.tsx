@@ -2,7 +2,7 @@ import { Divider, Form, Typography } from 'antd';
 
 import { useTaskStore } from '@/entities/task';
 import { ResetForm } from '@/features/reset-form';
-import { TotalPoints } from '@/shared/ui';
+import { TaskInformation, TotalPoints } from '@/shared/ui';
 import { linkifyText } from '@/shared/lib';
 
 export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
@@ -31,9 +31,9 @@ export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
       ) : (
         <>
           <TotalPoints points={totalPoints} />
-          <Paragraph>
+          <TaskInformation>
             <span dangerouslySetInnerHTML={{ __html: linkifyText(taskInformation) }} />
-          </Paragraph>
+          </TaskInformation>
           <Form form={form}>{slotCheckList}</Form>
           <TotalPoints points={totalPoints} />
           <Divider />
