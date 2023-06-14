@@ -1,5 +1,7 @@
 import { Divider, Form, Typography } from 'antd';
 
+import styles from './styles.module.scss';
+
 import { useTaskStore } from '@/entities/task';
 import { ResetForm } from '@/features/reset-form';
 import { TaskInformation, TotalPoints } from '@/shared/ui';
@@ -21,7 +23,9 @@ export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
 
   return (
     <>
-      <Title level={4}>Task name: {taskName}</Title>
+      <Title className={styles.taskName} level={4}>
+        Task name: {taskName}
+      </Title>
       <a href={github} target="_blank" rel="noreferrer">
         {github}
       </a>

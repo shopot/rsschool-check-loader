@@ -1,0 +1,9 @@
+.taskName {
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  .taskName {
+    text-align: center;
+  }
+}
