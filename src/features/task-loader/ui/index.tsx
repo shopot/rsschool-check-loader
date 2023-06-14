@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 import { useChecklistStore } from '@/entities/checklist';
 import { useTaskStore } from '@/entities/task';
-import { CHECKLIST_ACTIVE_TASK_LOCAL_URL, CHECKLIST_ACTIVE_TASK_URL } from '@/shared/config';
+import { CHECKLIST_ACTIVE_TASKS_LOCAL_URL, CHECKLIST_ACTIVE_TASKS_URL } from '@/shared/config';
 
 export const TaskLoader = (): JSX.Element => {
   const [isLoading, checklist, fetchChecklist] = useChecklistStore((state) => [
@@ -19,7 +19,7 @@ export const TaskLoader = (): JSX.Element => {
   const [downloadUrl, setDownloadUrl] = useState('');
 
   useEffect(() => {
-    void fetchChecklist([CHECKLIST_ACTIVE_TASK_LOCAL_URL, CHECKLIST_ACTIVE_TASK_URL]);
+    void fetchChecklist([CHECKLIST_ACTIVE_TASKS_LOCAL_URL, CHECKLIST_ACTIVE_TASKS_URL]);
   }, [fetchChecklist]);
 
   const handleChange = (value: string) => setDownloadUrl(value);
