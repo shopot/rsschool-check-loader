@@ -1,0 +1,178 @@
+{
+  "taskName": "File Manager",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/file-manager/assignment.md",
+  "information": "The maximum number of points is 330. Cross-check criteria:",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "Basic Scope"
+    },
+    {
+      "type": "title",
+      "title": "General (max 16 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Application accepts username and prints proper message",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Application exits if user pressed ctrl+c or sent .exit command and proper message is printed",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Operations fail (max 30 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Attempts to perform an operation on a non-existent file or work on a non-existent path result in the operation fail",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Operation fail doesn't crash application",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Navigation & working directory operations implemented properly (max 30 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Go upper from current directory",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Go to dedicated folder from current directory",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "List all files and folders in current directory",
+      "max": 20
+    },
+    {
+      "type": "title",
+      "title": "Basic operations with files implemented properly (max 60 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Read file and print it's content in console",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Create empty file",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Rename file",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Copy file",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Move file",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Delete file",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Operating system info (prints following information in console) implemented properly (max 34 points)"
+    },
+    {
+      "type": "subtask",
+      "text": " Get EOL (default system End-Of-Line)",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Get host machine CPUs info (overall amount of CPUS plus model and clock rate (in GHz) for each of them)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Get home directory",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Get current system user name (Do not confuse with the username that is set when the application starts)",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Get CPU architecture for which Node.js binary has compiled",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Hash calculation implemented properly (max 20 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Calculate hash for file",
+      "max": 20
+    },
+    {
+      "type": "title",
+      "title": "Compress and decompress operations (max 40 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Compress file (using Brotli algorithm)",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Decompress file (using Brotli algorithm)",
+      "max": 20
+    },
+    {
+      "type": "title",
+      "title": "Advanced Scope (max 90 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "All operations marked as to be implemented using certain streams should be performed using Streams API",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "No synchronous Node.js API with asynchronous analogues is used (e.g. not used readFileSync instead of readFile)",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Codebase is written in ESM modules instead of CommonJS",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Codebase is separated (at least 7 modules)",
+      "max": 20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-95% of total task score</b>: package.json have any external tools/libraries as dependencies. Any external tools/libraries are used",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-30% of total task score</b>: Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": 0
+    }
+  ]
+}
