@@ -1,14 +1,13 @@
 .layout {
-  max-width: 1200px;
   min-height: 100vh;
   background: #fff;
-  margin: 0 auto;
+  margin: 0 16px;
 }
 
 .content {
   background: #fff;
-  max-width: 1600px;
-  margin: 0 8px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding-bottom: 30px;
 }
 
@@ -16,4 +15,17 @@
   background: #fff;
   display: flex;
   justify-content: center;
+}
+
+
+@media screen and (min-width: 1200.98px) {
+  .layout {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 576.98px) {
+  .layout {
+    margin: 8px;
+  }
 }
