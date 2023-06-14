@@ -47,7 +47,5 @@ export const CheckList = (): JSX.Element => {
     }
   });
 
-  console.log(list.length);
-
   return <>{list}</>;
 };
