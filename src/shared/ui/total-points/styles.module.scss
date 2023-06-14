@@ -1,7 +1,17 @@
+.title {
+  text-align: right;
+}
+
 .fill {
   color: black;
 }
 
 .empty {
   color: dimgrey;
+}
+
+@media screen and (max-width: 480px){
+  .title {
+    text-align: center;
+  }
 }
