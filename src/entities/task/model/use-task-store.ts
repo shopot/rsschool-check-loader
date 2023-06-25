@@ -4,7 +4,7 @@ import { devtools } from 'zustand/middleware';
 import { createAbortSignal } from '@/shared/lib';
 import {
   CriteriaType,
-  ITaskState,
+  TypeTaskState,
   TypeCriteria,
   TypeResponseJSONObject,
   TypeTaskStore,
@@ -171,4 +171,4 @@ const taskStore: TypeTaskStore = (set, get) => ({
   },
 });
 
-export const useTaskStore = create<ITaskState>()(devtools(taskStore, { name: '@task-store' }));
+export const useTaskStore = create<TypeTaskState>()(devtools(taskStore, { name: '@task-store' }));

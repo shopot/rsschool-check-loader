@@ -25,7 +25,7 @@ export type TypeResponseJSONObject = {
   criteria: Partial<TypeCriteria>[];
 } | null;
 
-export interface ITaskState {
+export type TypeTaskState = {
   isLoading: boolean;
   taskName: string;
   github: string;
@@ -42,6 +42,6 @@ export interface ITaskState {
   getTotalPoints: () => number;
   getCriteriaResults: () => TypeCriteria[];
   validateReport: () => boolean;
-}
+};
 
-export type TypeTaskStore = StateCreator<ITaskState>;
+export type TypeTaskStore = StateCreator<TypeTaskState>;

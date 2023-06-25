@@ -2,7 +2,7 @@ import { devtools } from 'zustand/middleware';
 import { create } from 'zustand';
 
 import {
-  IChecklistState,
+  TypeChecklistState,
   TypeChecklist,
   TypeChecklistStore,
   TypeResponseChecklistObject,
@@ -50,6 +50,6 @@ const checklistStore: TypeChecklistStore = (set) => ({
   },
 });
 
-export const useChecklistStore = create<IChecklistState>()(
+export const useChecklistStore = create<TypeChecklistState>()(
   devtools(checklistStore, { name: '@checklist-store' })
 );

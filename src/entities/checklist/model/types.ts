@@ -12,11 +12,11 @@ export type TypeChecklist = {
   value: string;
 };
 
-export interface IChecklistState {
+export type TypeChecklistState = {
   isLoading: boolean;
   results: TypeChecklist[];
   error: string;
   fetchChecklist: (url: string | string[]) => Promise<void>;
-}
+};
 
-export type TypeChecklistStore = StateCreator<IChecklistState>;
+export type TypeChecklistStore = StateCreator<TypeChecklistState>;
