@@ -24,9 +24,9 @@ export const InputNumber = ({
   );
 };
 
-interface InputNumberProps {
+type InputNumberProps = {
   fieldName: string;
   buttonBefore: JSX.Element;
   max: number;
   onChange: (value: number | null) => void;
-}
+};

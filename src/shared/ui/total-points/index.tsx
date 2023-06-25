@@ -14,6 +14,6 @@ export const TotalPoints = ({ points }: TotalPointsProps): JSX.Element => {
   );
 };
 
-interface TotalPointsProps {
+type TotalPointsProps = {
   points: number;
-}
+};

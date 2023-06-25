@@ -17,8 +17,8 @@ export const Subtask = ({ isDone, textSlot, inputSlot }: SubtaskProps): JSX.Elem
   );
 };
 
-interface SubtaskProps {
+type SubtaskProps = {
   isDone: boolean;
   textSlot: string;
   inputSlot: JSX.Element;
-}
+};

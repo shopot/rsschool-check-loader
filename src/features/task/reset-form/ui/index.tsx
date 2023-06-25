@@ -16,6 +16,6 @@ export const ResetFormButton = ({ form }: ResetFormProps): JSX.Element => {
   );
 };
 
-interface ResetFormProps {
+type ResetFormProps = {
   form: FormInstance;
-}
+};

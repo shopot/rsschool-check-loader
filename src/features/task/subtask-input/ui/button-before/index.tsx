@@ -16,7 +16,7 @@ export const ButtonBefore = ({ variant, onClick }: ButtonBeforeProps): JSX.Eleme
   );
 };
 
-interface ButtonBeforeProps {
+type ButtonBeforeProps = {
   variant: string;
   onClick: () => void;
-}
+};

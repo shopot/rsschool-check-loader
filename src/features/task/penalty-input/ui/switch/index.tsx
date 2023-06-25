@@ -10,8 +10,8 @@ export const Switch = ({ fieldName, value, onChange }: SwitchProps): JSX.Element
   );
 };
 
-interface SwitchProps {
+type SwitchProps = {
   fieldName: string;
   value: number;
   onChange: (checked: boolean) => void;
-}
+};

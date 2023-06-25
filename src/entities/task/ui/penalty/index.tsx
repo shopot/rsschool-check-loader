@@ -22,8 +22,8 @@ export const Penalty = ({ isDone, textSlot, inputSlot }: PenaltyProps): JSX.Elem
   );
 };
 
-interface PenaltyProps {
+type PenaltyProps = {
   isDone: boolean;
   textSlot: string;
   inputSlot: JSX.Element;
-}
+};

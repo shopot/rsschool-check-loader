@@ -45,6 +45,6 @@ export const SubtaskInput = ({ criteria }: SubtaskInputProps) => {
   return <Subtask isDone={isDone} textSlot={textSlotString} inputSlot={inputSlotComponent} />;
 };
 
-interface SubtaskInputProps {
+type SubtaskInputProps = {
   criteria: TypeCriteria;
-}
+};

@@ -12,6 +12,6 @@ export const TaskInformation = ({ children }: TaskInformationProps): JSX.Element
   );
 };
 
-interface TaskInformationProps {
+type TaskInformationProps = {
   children: JSX.Element;
-}
+};

@@ -16,6 +16,6 @@ export const Layout = ({ slotFooter }: LayoutProps) => {
   );
 };
 
-interface LayoutProps {
+type LayoutProps = {
   slotFooter: JSX.Element;
-}
+};

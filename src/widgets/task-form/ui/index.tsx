@@ -13,7 +13,7 @@ export const TaskForm = ({ slotCheckList }: TaskCardProps): JSX.Element => {
 
   const isChecklistEmpty = useTaskStore((state) => state.criteriaResults.length === 0);
 
-  const totalPoints = useTaskStore.getState().totalPoints();
+  const totalPoints = useTaskStore.getState().getTotalPoints();
 
   const { Title, Paragraph } = Typography;
 
@@ -53,6 +53,6 @@ export const TaskForm = ({ slotCheckList }: TaskCardProps): JSX.Element => {
   );
 };
 
-interface TaskCardProps {
+type TaskCardProps = {
   slotCheckList?: JSX.Element;
-}
+};

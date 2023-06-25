@@ -13,7 +13,7 @@ export const LayoutPage = ({ slotTitle, slotContent }: LayoutPageProps): JSX.Ele
   );
 };
 
-interface LayoutPageProps {
+type LayoutPageProps = {
   slotTitle: string;
   slotContent: JSX.Element;
-}
+};

@@ -18,8 +18,8 @@ export const InputNumber = ({ fieldName, max, onChange }: InputNumberProps): JSX
   );
 };
 
-interface InputNumberProps {
+type InputNumberProps = {
   fieldName: string;
   max: number;
   onChange: (value: number) => void;
-}
+};
