@@ -1,7 +1,5 @@
-import { Button, Grid, Modal } from 'antd';
+import { Button, Modal } from 'antd';
 import { ReactNode } from 'react';
-
-const { useBreakpoint } = Grid;
 
 export const ModalDialog = ({
   children,
@@ -9,14 +7,11 @@ export const ModalDialog = ({
   handleCopy,
   handleClose,
 }: ModalDialogProps): JSX.Element => {
-  const { sm } = useBreakpoint();
-
   return (
     <Modal
       centered
       open={open}
       onCancel={handleClose}
-      width={sm ? '80%' : '100%'}
       footer={[
         <Button key="copy" type="primary" onClick={handleCopy}>
           Copy
