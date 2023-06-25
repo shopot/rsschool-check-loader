@@ -30,8 +30,10 @@
     "@types/compose-function": "^0.0.30",
     "antd": "^5.5.1",
     "compose-function": "^3.0.3",
+    "copy-to-clipboard": "^3.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
     "react-router-dom": "^6.11.2",
     "zustand": "^4.3.8"
   },

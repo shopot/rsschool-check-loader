@@ -1,37 +1,30 @@
-import { useState } from 'react';
-import { Button } from 'antd';
+import ReactMarkdown from 'react-markdown';
+import copy from 'copy-to-clipboard';
 
-import { useNotification } from '@/shared/lib';
-import { useTaskStore } from '@/entities/task';
+import { useReportStore } from '@/entities/report';
 import { ModalDialog } from '@/shared/ui';
+import { useNotification } from '@/shared/lib';
 
 export const ReportDialog = (): JSX.Element => {
-  const [isReportOpen, setIsReportOpen] = useState(false);
+  const { success, contextHolder } = useNotification();
 
-  const { error, contextHolder } = useNotification();
+  const [isOpen, toggleIsOpen, content] = useReportStore((state) => [
+    state.isOpen,
+    state.toggleIsOpen,
+    state.content,
+  ]);
 
-  const validateReport = useTaskStore((state) => state.validateReport);
+  const copyToClipboard = () => {
+    copy(content);
 
-  const handleCreateReport = (): void => {
-    if (!validateReport()) {
-      return error('Please complete all mandatory fields');
-    }
-
-    // setIsReportOpen(true);
+    success('Text successfully copied to clipboard');
   };
 
   return (
     <>
       {contextHolder}
-      <Button type={'primary'} className="btn" onClick={handleCreateReport}>
-        Create Report
-      </Button>
-      <ModalDialog
-        open={isReportOpen}
-        handleCopy={() => console.log('handleCopy')}
-        handleClose={() => setIsReportOpen(false)}
-      >
-        demo
+      <ModalDialog open={isOpen} handleCopy={copyToClipboard} handleClose={toggleIsOpen}>
+        <ReactMarkdown>{content}</ReactMarkdown>
       </ModalDialog>
     </>
   );

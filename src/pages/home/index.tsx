@@ -4,6 +4,7 @@ import { LayoutPage, Loader } from '@/shared/ui';
 import { CheckList } from '@/widgets/check-list';
 import { LoadTaskForm } from '@/features/checklist';
 import { useTaskStore } from '@/entities/task';
+import { ReportDialog } from '@/features/report';
 
 const TaskForm = lazy(async () => ({
   default: (await import('@/widgets/task-form')).TaskForm,
@@ -23,6 +24,7 @@ export const HomePage = (): JSX.Element => {
           <TaskForm slotCheckList={<CheckList />} />{' '}
         </Suspense>
       )}
+      <ReportDialog />
     </>
   );
 
