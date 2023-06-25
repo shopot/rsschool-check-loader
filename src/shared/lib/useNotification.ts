@@ -10,7 +10,7 @@ export const useNotification = () => {
 
   const openNotificationWithIcon = (type: NotificationType, description: string) => {
     api[type]({
-      message: type === NotificationType.Error ? 'Error message' : 'Success message',
+      message: type === NotificationType.Error ? 'Error' : 'Success',
       description: description,
     });
   };
