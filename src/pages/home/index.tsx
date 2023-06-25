@@ -1,10 +1,10 @@
 import { lazy, Suspense } from 'react';
 
 import { LayoutPage, Loader } from '@/shared/ui';
-import { CheckList } from '@/widgets/check-list';
 import { LoadTaskForm } from '@/features/checklist';
 import { useTaskStore } from '@/entities/task';
 import { ReportDialog } from '@/features/report';
+import { CheckList } from '@/widgets/checklist';
 
 const TaskForm = lazy(async () => ({
   default: (await import('@/widgets/task-form')).TaskForm,
