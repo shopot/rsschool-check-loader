@@ -21,6 +21,7 @@ export const ReasonInput = ({ criteriaId, reason }: ReasonInputProps): JSX.Eleme
 
   return (
     <TextArea
+      placeholder="Please explain the reason for the assessment"
       className={styles.textArea}
       status={statusType}
       value={reason}
