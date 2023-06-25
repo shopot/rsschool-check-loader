@@ -30,6 +30,6 @@ export const PenaltyInput = ({ criteria }: PenaltyInputProps) => {
   return <Penalty isDone={isDone} textSlot={textSlotString} inputSlot={inputSlotComponent} />;
 };
 
-interface PenaltyInputProps {
+type PenaltyInputProps = {
   criteria: TypeCriteria;
-}
+};

@@ -1,12 +1,12 @@
-import { LayoutPage, Loader } from '@/shared/ui';
-import { TaskLoader } from '@/features/task-loader';
-
-import { CheckList } from '@/widgets/check-list';
-import { useTaskStore } from '@/entities/task';
 import { lazy, Suspense } from 'react';
 
-const TaskCard = lazy(async () => ({
-  default: (await import('@/widgets/task-card')).TaskCard,
+import { LayoutPage, Loader } from '@/shared/ui';
+import { CheckList } from '@/widgets/check-list';
+import { LoadTaskForm } from '@/features/checklist';
+import { useTaskStore } from '@/entities/task';
+
+const TaskForm = lazy(async () => ({
+  default: (await import('@/widgets/task-form')).TaskForm,
 }));
 
 export const HomePage = (): JSX.Element => {
@@ -16,11 +16,11 @@ export const HomePage = (): JSX.Element => {
 
   const content = (
     <>
-      <TaskLoader />
+      <LoadTaskForm />
       {isLoading && <Loader />}
       {!isLoading && (
         <Suspense fallback={<Loader />}>
-          <TaskCard slotCheckList={<CheckList />} />{' '}
+          <TaskForm slotCheckList={<CheckList />} />{' '}
         </Suspense>
       )}
     </>

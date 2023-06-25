@@ -5,8 +5,7 @@ import styles from './styles.module.scss';
 
 import { CriteriaType, useTaskStore } from '@/entities/task';
 import { linkifyText } from '@/shared/lib';
-import { SubtaskInput } from '@/features/subtask-input';
-import { PenaltyInput } from '@/features/penalty-input';
+import { SubtaskInput, PenaltyInput, ReasonInput } from '@/features/task';
 
 export const CheckList = (): JSX.Element => {
   const { criteriaResults } = useTaskStore();
@@ -16,7 +15,7 @@ export const CheckList = (): JSX.Element => {
   let isPenaltyTitleShowed = false;
 
   const list = criteriaResults.map((criteriaItem) => {
-    const { type, id, title } = criteriaItem;
+    const { type, id, title, isReasonEnabled, reason } = criteriaItem;
 
     if (type === CriteriaType.Title) {
       if (title !== undefined) {
@@ -29,7 +28,12 @@ export const CheckList = (): JSX.Element => {
 
       return null;
     } else if (type === CriteriaType.Subtask) {
-      return <SubtaskInput key={id} criteria={criteriaItem} />;
+      return (
+        <Fragment key={id}>
+          <SubtaskInput criteria={criteriaItem} />
+          {isReasonEnabled && <ReasonInput criteriaId={id} reason={reason} />}
+        </Fragment>
+      );
     } else if (type === CriteriaType.Penalty) {
       let penaltyTitle: JSX.Element | null = null;
 

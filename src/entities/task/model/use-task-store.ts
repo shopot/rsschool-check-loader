@@ -2,8 +2,15 @@ import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
 import { createAbortSignal } from '@/shared/lib';
-import { ITaskState, TypeCriteria, TypeResponseJSONObject, TypeTaskStore } from './types.ts';
+import {
+  CriteriaType,
+  ITaskState,
+  TypeCriteria,
+  TypeResponseJSONObject,
+  TypeTaskStore,
+} from './types.ts';
 import { createCriteria } from '../lib';
+import { REASON_MIN_LENGTH } from '@/shared/config';
 
 const initialState = {
   isLoading: false,
@@ -12,10 +19,11 @@ const initialState = {
   taskInformation: '',
   criteriaResults: [],
   maxTotalPoints: 0,
+  isReportOpen: false,
   error: '',
 };
 
-const getInitialState = () => ({ ...initialState, criteriaResults: [] });
+const getInitialState = () => structuredClone(initialState);
 
 const taskStore: TypeTaskStore = (set, get) => ({
   ...getInitialState(),
@@ -65,8 +73,13 @@ const taskStore: TypeTaskStore = (set, get) => ({
     set({ ...getInitialState() });
   },
 
-  resetTotalPoints: (): void => {
-    const stateNext = get().criteriaResults.map((criteria) => ({ ...criteria, value: 0 }));
+  resetTaskResults: (): void => {
+    const stateNext = get().criteriaResults.map((criteria) => ({
+      ...criteria,
+      value: 0,
+      reason: '',
+      isReasonEnabled: false,
+    }));
 
     set({ criteriaResults: stateNext });
   },
@@ -78,7 +91,30 @@ const taskStore: TypeTaskStore = (set, get) => ({
 
     if (idx) {
       const stateNext = [...criteriaState];
-      stateNext[idx] = { ...stateNext[idx], value: value };
+
+      stateNext[idx] = {
+        ...stateNext[idx],
+        value: value,
+        isReasonEnabled: stateNext[idx].max !== value,
+      };
+
+      set({ criteriaResults: stateNext });
+    }
+  },
+
+  setReason: (id: number, value: string): void => {
+    const criteriaState = get().criteriaResults;
+
+    const idx = criteriaState.findIndex((item) => item.id === id);
+
+    if (idx) {
+      const stateNext = [...criteriaState];
+
+      stateNext[idx] = {
+        ...stateNext[idx],
+        reason: value,
+      };
+
       set({ criteriaResults: stateNext });
     }
   },
@@ -87,6 +123,32 @@ const taskStore: TypeTaskStore = (set, get) => ({
     const total = get().criteriaResults.reduce((sum, criteria) => sum + criteria.value, 0);
 
     return total > 0 ? total : 0;
+  },
+
+  validateReport: (): boolean => {
+    const { criteriaResults } = get();
+
+    let status = true;
+
+    for (let i = 0; i < criteriaResults.length; i++) {
+      const criteria = criteriaResults[i];
+
+      if (
+        criteria.type === CriteriaType.Subtask &&
+        criteria.max !== criteria.value &&
+        criteria.reason.length < REASON_MIN_LENGTH
+      ) {
+        criteria.isReasonEnabled = true;
+
+        status = false;
+      }
+    }
+
+    if (!status) {
+      set({ criteriaResults: criteriaResults });
+    }
+
+    return status;
   },
 });
 

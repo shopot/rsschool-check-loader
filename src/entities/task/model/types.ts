@@ -14,6 +14,8 @@ export type TypeCriteria = {
   max?: number;
   input: boolean;
   value: number;
+  isReasonEnabled: boolean;
+  reason: string;
 };
 
 export type TypeResponseJSONObject = {
@@ -30,13 +32,16 @@ export interface ITaskState {
   taskInformation: string;
   criteriaResults: TypeCriteria[];
   maxTotalPoints: number;
+  isReportOpen: boolean;
   error: string;
   fetchTask: (url: string) => void;
   initTask: (data: TypeResponseJSONObject) => void;
   reset: () => void;
-  resetTotalPoints: () => void;
+  resetTaskResults: () => void;
   setCriteriaPoints: (id: number, value: number) => void;
+  setReason: (id: number, value: string) => void;
   totalPoints: () => number;
+  validateReport: () => boolean;
 }
 
 export type TypeTaskStore = StateCreator<ITaskState>;

@@ -7,7 +7,7 @@ import { useChecklistStore } from '@/entities/checklist';
 import { useTaskStore } from '@/entities/task';
 import { CHECKLIST_ACTIVE_TASKS_LOCAL_URL, CHECKLIST_ACTIVE_TASKS_URL } from '@/shared/config';
 
-export const TaskLoader = (): JSX.Element => {
+export const LoadTaskForm = (): JSX.Element => {
   const [isLoading, checklist, fetchChecklist] = useChecklistStore((state) => [
     state.isLoading,
     state.results,

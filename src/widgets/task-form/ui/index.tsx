@@ -1,13 +1,13 @@
-import { Divider, Form, Typography } from 'antd';
+import { Divider, Form, Space, Typography } from 'antd';
 
 import styles from './styles.module.scss';
 
 import { useTaskStore } from '@/entities/task';
-import { ResetForm } from '@/features/reset-form';
 import { TaskInformation, TotalPoints } from '@/shared/ui';
 import { linkifyText } from '@/shared/lib';
+import { CreateReportButton, ResetFormButton } from '@/features/task';
 
-export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
+export const TaskForm = ({ slotCheckList }: TaskCardProps): JSX.Element => {
   const [form] = Form.useForm();
   const { taskName, github, taskInformation } = useTaskStore();
 
@@ -43,7 +43,10 @@ export const TaskCard = ({ slotCheckList }: TaskCardProps): JSX.Element => {
           <Form form={form}>{slotCheckList}</Form>
           <TotalPoints points={totalPoints} />
           <Divider />
-          <ResetForm form={form} />
+          <Space align="center" className={styles.buttons}>
+            <CreateReportButton />
+            <ResetFormButton form={form} />
+          </Space>
         </>
       )}
     </>

@@ -2,6 +2,13 @@
   text-align: left;
 }
 
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 480px) {
   .taskName {
     text-align: center;

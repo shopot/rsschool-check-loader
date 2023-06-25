@@ -15,6 +15,8 @@ export const createCriteria = (arr: TypeCriteria[]): TypeCriteria[] => {
       id: counter++,
       value: 0,
       input: input,
+      isReasonEnabled: false,
+      reason: '',
     };
   });
 };
