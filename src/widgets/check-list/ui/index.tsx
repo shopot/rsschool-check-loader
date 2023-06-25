@@ -46,6 +46,7 @@ export const CheckList = (): JSX.Element => {
         <Fragment key={id}>
           {penaltyTitle !== null && penaltyTitle}
           <PenaltyInput criteria={criteriaItem} />
+          {isReasonEnabled && <ReasonInput criteriaId={id} reason={reason} />}
         </Fragment>
       );
     }

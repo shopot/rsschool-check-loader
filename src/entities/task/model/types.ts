@@ -31,7 +31,6 @@ export interface ITaskState {
   github: string;
   taskInformation: string;
   criteriaResults: TypeCriteria[];
-  maxTotalPoints: number;
   isReportOpen: boolean;
   error: string;
   fetchTask: (url: string) => void;
@@ -40,7 +39,8 @@ export interface ITaskState {
   resetTaskResults: () => void;
   setCriteriaPoints: (id: number, value: number) => void;
   setReason: (id: number, value: string) => void;
-  totalPoints: () => number;
+  getTotalPoints: () => number;
+  getCriteriaResults: () => TypeCriteria[];
   validateReport: () => boolean;
 }
 

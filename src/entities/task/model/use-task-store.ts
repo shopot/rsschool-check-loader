@@ -18,7 +18,6 @@ const initialState = {
   github: '',
   taskInformation: '',
   criteriaResults: [],
-  maxTotalPoints: 0,
   isReportOpen: false,
   error: '',
 };
@@ -85,20 +84,28 @@ const taskStore: TypeTaskStore = (set, get) => ({
   },
 
   setCriteriaPoints: (id: number, value: number): void => {
-    const criteriaState = get().criteriaResults;
+    const criteriaResults = get().criteriaResults;
 
-    const idx = criteriaState.findIndex((item) => item.id === id);
+    const idx = criteriaResults.findIndex((item) => item.id === id);
 
     if (idx) {
-      const stateNext = [...criteriaState];
+      const { type, max } = criteriaResults[idx];
 
-      stateNext[idx] = {
-        ...stateNext[idx],
-        value: value,
-        isReasonEnabled: stateNext[idx].max !== value,
+      let isReasonEnabled = false;
+
+      if (type === CriteriaType.Subtask) {
+        isReasonEnabled = max !== value;
+      } else if (type === CriteriaType.Penalty) {
+        isReasonEnabled = value !== 0;
+      }
+
+      criteriaResults[idx] = {
+        ...criteriaResults[idx],
+        value,
+        isReasonEnabled,
       };
 
-      set({ criteriaResults: stateNext });
+      set({ criteriaResults: [...criteriaResults] });
     }
   },
 
@@ -119,10 +126,14 @@ const taskStore: TypeTaskStore = (set, get) => ({
     }
   },
 
-  totalPoints: (): number => {
+  getTotalPoints: (): number => {
     const total = get().criteriaResults.reduce((sum, criteria) => sum + criteria.value, 0);
 
     return total > 0 ? total : 0;
+  },
+
+  getCriteriaResults: (): TypeCriteria[] => {
+    return get().criteriaResults.filter((criteria) => criteria.type !== CriteriaType.Title);
   },
 
   validateReport: (): boolean => {
@@ -136,6 +147,14 @@ const taskStore: TypeTaskStore = (set, get) => ({
       if (
         criteria.type === CriteriaType.Subtask &&
         criteria.max !== criteria.value &&
+        criteria.reason.length < REASON_MIN_LENGTH
+      ) {
+        criteria.isReasonEnabled = true;
+
+        status = false;
+      } else if (
+        criteria.type === CriteriaType.Penalty &&
+        criteria.value !== 0 &&
         criteria.reason.length < REASON_MIN_LENGTH
       ) {
         criteria.isReasonEnabled = true;
