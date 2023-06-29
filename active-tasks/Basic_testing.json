@@ -95,7 +95,7 @@
     },
     {
       "type": "title",
-      "title": "Your task is to test functions that work asynchronously/throw/reject exceptions.."
+      "title": "Your task is to test functions that work asynchronously/throw/reject exceptions."
     },
     {
       "type": "subtask",
@@ -118,7 +118,7 @@
       "max": 6
     },
     {
-      "type": "",
+      "type": "subtask",
       "text": "Should reject custom error",
       "max": 6
     },
@@ -128,7 +128,7 @@
     },
     {
       "type": "title",
-      "title": "Your task is to test a class representing a bank account that implements corresponding operations. "
+      "title": "Your task is to test a class representing a bank account that implements corresponding operations."
     },
     {
       "type": "subtask",
@@ -247,7 +247,7 @@
     },
     {
       "type": "title",
-      "title": "Your task is to test that function that utilize library APIs is working correctly (with commonly used libraries such as axios and lodash as examples).,"
+      "title": "Your task is to test that function that utilize library APIs is working correctly (with commonly used libraries such as axios and lodash as examples)."
     },
     {
       "type": "subtask",
