@@ -12,38 +12,38 @@
       "title": "Write unit tests for the simpleCalculator function, which performs basic mathematical operations - addition, subtraction, division, multiplication, and exponentiation. Your task is to verify that the operations are executed correctly and that the function returns null for invalid input."
     },
     {
-      "type": "Should add two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should add two numbers",
       "max": 6
     },
     {
-      "type": "Should subtract two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should subtract two numbers",
       "max": 6
     },
     {
-      "type": "Should multiply two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should multiply two numbers",
       "max": 6
     },
     {
-      "type": "Should divide two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should divide two numbers",
       "max": 6
     },
     {
-      "type": "Should exponentiate two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should exponentiate two numbers",
       "max": 6
     },
     {
-      "type": "Should return null for invalid action",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should return null for invalid action",
       "max": 6
     },
     {
-      "type": "Should return null for invalid action",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should return null for invalid action",
       "max": 6
     },
     {
@@ -55,8 +55,8 @@
       "title": "Your task is to rewrite the tests written in the previous task using the table-driven testing approach, utilizing the appropriate Jest API."
     },
     {
-      "type": "Should add two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should add two numbers",
       "max": 6
     },
     {
@@ -65,28 +65,28 @@
       "max": 6
     },
     {
-      "type": "Should multiply two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should multiply two numbers",
       "max": 6
     },
     {
-      "type": "Should divide two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should divide two numbers",
       "max": 6
     },
     {
-      "type": "Should exponentiate two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should exponentiate two numbers",
       "max": 6
     },
     {
-      "type": "Should return null for invalid action",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should return null for invalid action",
       "max": 6
     },
     {
-      "type": "Should return null for invalid action",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should return null for invalid action",
       "max": 6
     },
     {
@@ -98,28 +98,28 @@
       "title": "Your task is to test functions that work asynchronously/throw/reject exceptions.."
     },
     {
-      "type": "Should resolve provided value",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should resolve provided value",
       "max": 6
     },
     {
-      "type": "Should throw error with provided message",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should throw error with provided message",
       "max": 6
     },
     {
-      "type": "Should throw error with default message if message is not provided",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should throw error with default message if message is not provided",
       "max": 6
     },
     {
-      "type": "Should throw custom error",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should throw custom error",
       "max": 6
     },
     {
-      "type": "Should reject custom error",
-      "text": "text",
+      "type": "",
+      "text": "Should reject custom error",
       "max": 6
     },
     {
