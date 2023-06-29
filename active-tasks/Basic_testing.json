@@ -43,7 +43,7 @@
     },
     {
       "type": "subtask",
-      "text": "Should return null for invalid action",
+      "text": "should return null for invalid arguments",
       "max": 6
     },
     {
@@ -60,8 +60,8 @@
       "max": 6
     },
     {
-      "type": "Should subtract two numbers",
-      "text": "text",
+      "type": "subtask",
+      "text": "Should subtract two numbers",
       "max": 6
     },
     {
@@ -86,7 +86,7 @@
     },
     {
       "type": "subtask",
-      "text": "Should return null for invalid action",
+      "text": "should return null for invalid arguments",
       "max": 6
     },
     {
