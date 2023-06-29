@@ -1,0 +1,274 @@
+{
+  "taskName": "Basic testing",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/basic-testing/assignment.md",
+  "information": "The maximum number of points is 258. Cross-check criteria:",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "Simple tests (max 42 points)"
+    },
+    {
+      "type": "title",
+      "title": "Write unit tests for the simpleCalculator function, which performs basic mathematical operations - addition, subtraction, division, multiplication, and exponentiation. Your task is to verify that the operations are executed correctly and that the function returns null for invalid input."
+    },
+    {
+      "type": "Should add two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should subtract two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should multiply two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should divide two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should exponentiate two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should return null for invalid action",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should return null for invalid action",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Table tests (max 42 points)"
+    },
+    {
+      "type": "title",
+      "title": "Your task is to rewrite the tests written in the previous task using the table-driven testing approach, utilizing the appropriate Jest API."
+    },
+    {
+      "type": "Should add two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should subtract two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should multiply two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should divide two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should exponentiate two numbers",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should return null for invalid action",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should return null for invalid action",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Error handling & async (max 30 points)"
+    },
+    {
+      "type": "title",
+      "title": "Your task is to test functions that work asynchronously/throw/reject exceptions.."
+    },
+    {
+      "type": "Should resolve provided value",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should throw error with provided message",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should throw error with default message if message is not provided",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should throw custom error",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "Should reject custom error",
+      "text": "text",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Testing class (max 60 points)"
+    },
+    {
+      "type": "title",
+      "title": "Your task is to test a class representing a bank account that implements corresponding operations. "
+    },
+    {
+      "type": "subtask",
+      "text": "Should create account with initial balance",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should throw InsufficientFundsError error when withdrawing more than balance",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should throw error when transferring more than balance",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should throw error when transferring to the same account",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should deposit money",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should withdraw money",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should transfer money",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "FetchBalance should return number in case if request did not failed",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should set new balance if fetchBalance returned number",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should throw SynchronizationFailedError if fetchBalance returned null",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Partial mocking (max 12 points)"
+    },
+    {
+      "type": "title",
+      "title": "Your task is to utilize the Jest API to partially mock the contents of a module."
+    },
+    {
+      "type": "subtask",
+      "text": "mockOne, mockTwo, mockThree should not log into console",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "nmockedFunction should log into console",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Mocking Node.js API (max 42 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Should set timeout with provided callback and timeout",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should call callback only after timeout",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should set interval with provided callback and timeout",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should call callback multiple times after multiple intervals",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should call join with pathToFile",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should return null if file does not exist",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should return file content if file exists",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Mocking library API (max 18 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Should create instance with provided base url",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should perform request to correct provided url",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should return response data",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Snapshot testing (max 12 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Should generate linked list from values 1",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Should generate linked list from values 2",
+      "max": 6
+    }
+  ]
+}
