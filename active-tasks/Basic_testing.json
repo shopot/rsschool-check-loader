@@ -203,6 +203,10 @@
       "title": "Mocking Node.js API (max 42 points)"
     },
     {
+      "type": "title",
+      "title": "Your task is to test the proper usage of the Node.js API based on commonly used APIs such as the fs module, as well as setTimeout and setInterval. Remember that the tests should not interact with the actual file system and should not rely on real-time!"
+    },
+    {
       "type": "subtask",
       "text": "Should set timeout with provided callback and timeout",
       "max": 6
@@ -242,6 +246,10 @@
       "title": "Mocking library API (max 18 points)"
     },
     {
+      "type": "title",
+      "title": "Your task is to test that function that utilize library APIs is working correctly (with commonly used libraries such as axios and lodash as examples).,"
+    },
+    {
       "type": "subtask",
       "text": "Should create instance with provided base url",
       "max": 6
@@ -259,6 +267,10 @@
     {
       "type": "title",
       "title": "Snapshot testing (max 12 points)"
+    },
+    {
+      "type": "title",
+      "title": "our task is to use snapshot testing with Jest and compare it to regular comparison testing."
     },
     {
       "type": "subtask",
