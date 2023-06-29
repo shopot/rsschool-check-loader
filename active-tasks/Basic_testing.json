@@ -270,7 +270,7 @@
     },
     {
       "type": "title",
-      "title": "our task is to use snapshot testing with Jest and compare it to regular comparison testing."
+      "title": "Your task is to use snapshot testing with Jest and compare it to regular comparison testing."
     },
     {
       "type": "subtask",
