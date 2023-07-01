@@ -281,6 +281,21 @@
       "type": "subtask",
       "text": "Should generate linked list from values 2",
       "max": 6
+    },
+    {
+      "type": "penalty",
+      "text": "-5 for each linter warning (-5 points per each)",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-10 for each linter/TS compiler error (-10 points per each)",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-30% of total task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": 0
     }
   ]
 }
