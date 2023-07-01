@@ -102,11 +102,6 @@
     },
     {
       "type": "penalty",
-      "text": "-30% of total task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
-      "max": 0
-    },
-    {
-      "type": "penalty",
       "text": "-20 Missing PR or its description is incorrect",
       "max": 0
     },
