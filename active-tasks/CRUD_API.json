@@ -1,0 +1,124 @@
+{
+  "taskName": "CRUD API",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/crud-api/assignment.md",
+  "information": "The maximum number of points is 222. Cross-check criteria:",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "Basic Scope (max 72 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "The repository with the application contains a Readme.md file containing detailed instructions for installing, running and using the application",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "GET api/users implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "GET api/users/{userId} implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "POST api/users implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "PUT api/users/{userId} implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "DELETE api/users/{userId} implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Users are stored in the form described in the technical requirements",
+      "max": 6
+    },
+    {
+      "type": "subtask",
+      "text": "Value of port on which application is running is stored in .env file",
+      "max": 6
+    },
+    {
+      "type": "title",
+      "title": "Advanced Scope (max 70 points)"
+    },
+    {
+      "type": "subtask",
+      "text": "Task implemented on Typescript",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "Processing of requests to non-existing endpoints implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Errors on the server side that occur during the processing of a request should be handled and processed properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Development mode: npm script start:dev implemented properly",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Production mode: npm script start:prod implemented properly",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Hacker Scope (max 80 points)",
+    },
+    {
+      "type": "subtask",
+      "text": "There are tests for API (not less than 3 scenarios)",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "There is horizontal scaling for application with a load balancer",
+      "max": 50
+    },
+    {
+      "type": "penalty",
+      "text": "-95% of total task score any external tools except nodemon, dotenv, cross-env, typescript, ts-node, ts-node-dev, eslint and its plugins, webpack and its plugins, prettier and it's plugins, uuid, @types/* as well as libraries used for testing",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-30% of total task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-30% of total task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-20 Missing PR or its description is incorrect",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-20 No separate development branch",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "-20 Less than 3 commits in the development branch, not including commits that make changes only to Readme.md or similar files (tsconfig.json, .gitignore, .prettierrc.json, etc.)",
+      "max": 0
+    }
+  ]
+}
