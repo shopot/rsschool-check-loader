@@ -285,12 +285,12 @@
     {
       "type": "penalty",
       "text": "-5 for each linter warning (-5 points per each)",
-      "max": 0
+      "max": -5
     },
     {
       "type": "penalty",
       "text": "-10 for each linter/TS compiler error (-10 points per each)",
-      "max": 0
+      "max": -10
     },
     {
       "type": "penalty",
