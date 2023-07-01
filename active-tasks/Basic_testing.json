@@ -43,7 +43,7 @@
     },
     {
       "type": "subtask",
-      "text": "should return null for invalid arguments",
+      "text": "Should return null for invalid arguments",
       "max": 6
     },
     {
@@ -86,7 +86,7 @@
     },
     {
       "type": "subtask",
-      "text": "should return null for invalid arguments",
+      "text": "Should return null for invalid arguments",
       "max": 6
     },
     {
@@ -167,7 +167,7 @@
     },
     {
       "type": "subtask",
-      "text": "FetchBalance should return number in case if request did not failed",
+      "text": "fetchBalance should return number in case if request did not failed",
       "max": 6
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "type": "subtask",
-      "text": "nmockedFunction should log into console",
+      "text": "unmockedFunction should log into console",
       "max": 6
     },
     {
