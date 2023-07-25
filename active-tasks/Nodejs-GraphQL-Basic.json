@@ -1,0 +1,62 @@
+{
+  "taskName": "Node.js GraphQL Basic",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/graphql-service/assignment.md",
+  "information": "The maximum number of points is 360. Cross-check criteria:",
+  "criteria": [
+    {
+      "type": "subtask",
+      "text": "npm run test-queries",
+      "max": 144
+    },
+    {
+      "type": "subtask",
+      "text": "npm run test-mutations",
+      "max": 90
+    },
+    {
+      "type": "subtask",
+      "text": "npm run test-rule",
+      "max": 18
+    },
+    {
+      "type": "subtask",
+      "text": "npm run test-loader",
+      "max": 80
+    },
+    {
+      "type": "subtask",
+      "text": "npm run test-loader-prime",
+      "max": 28
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-100%</b> of max task score Fails: npm run test-integrity",
+      "max": -360
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-30%</b> of total task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": -30
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> No separate development branch",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> No Pull Request",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-10</b> Pull Request description is incorrect",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> Less than 3 commits in the development branch, not including commits that make changes only to Readme.md or similar files (tsconfig.json, .gitignore, .prettierrc.json, etc.)",
+      "max": -20
+    }
+  ]
+}
