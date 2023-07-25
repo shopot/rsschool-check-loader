@@ -4,6 +4,10 @@
   "information": "The maximum number of points is 360. Cross-check criteria:",
   "criteria": [
     {
+      "type": "title",
+      "title": "Basic Scope"
+    },
+    {
       "type": "subtask",
       "text": "npm run test-queries",
       "max": 144
