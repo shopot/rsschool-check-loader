@@ -38,11 +38,6 @@
       "max": 10
     },
     {
-      "type": "subtask",
-      "text": "For each successfully passed test, total 67 tests",
-      "max": 670
-    },
-    {
       "type": "title",
       "title": "Album tests"
     },
