@@ -1,7 +1,7 @@
 {
   "taskName": "Node.js Home Library Service: Part 1",
-  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/graphql-service/assignment.md",
-  "information": "The maximum number of points is 360. Cross-check criteria:",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/rest-service/assignment.md",
+  "information": "The maximum number of points is 760. Cross-check criteria:",
   "criteria": [
     {
       "type": "title",
