@@ -1,0 +1,450 @@
+{
+  "taskName": "Node.js Home Library Service: Part 1",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/graphql-service/assignment.md",
+  "information": "The maximum number of points is 360. Cross-check criteria:",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "Basic Scope"
+    },
+    {
+      "type": "subtask",
+      "text": "The repository with the application contains a Readme.md file containing detailed instructions for installing, running and using the application",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "The application code that worked with Users instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "The application code that worked with Tracks instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "The application code that worked with Albums instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "The application code that worked with Artists instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "The application code that worked with Favorites instance divided into modules according to to its purpose and Nest.js architecture conventions (work with request and response in controller, business logic in service, etc.)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "For each successfully passed test, total 67 tests",
+      "max": 670
+    },
+    {
+      "type": "title",
+      "title": "Album tests"
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get all albums",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get album by id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if album doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly create album",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST in case of invalid required data",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly update album",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid dto",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if album doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete album",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if album doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should set track.albumId = null after delete",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Artist tests"
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get all artists",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get artist by id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if artist doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly create artist",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST in case of invalid required data",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly update artist match",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid dto",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if artist doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete artist",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if artist doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should set track.artistId to null after deletion",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should set album.artistId to null after deletion",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Favorites tests"
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get all favorites (at least empty)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get all favorites entities",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly add artist to favorites",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly add album to favorites",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly add track to favorites",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with UNPROCESSABLE_ENTITY in case of entity absence",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete album from favorites",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete artist from favorites",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete track from favorites",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if entity doesn",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Track tests"
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get all tracks",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get track by id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if track doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly create track",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST in case of invalid required data",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly update track match",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid dto",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if track doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete track",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if track doesn",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "User tests"
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get all users",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly get user by id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if user doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly create user",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST in case of invalid required data",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly update user password match",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid dto",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if user doesn",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should correctly delete user",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with BAD_REQUEST status code in case of invalid id",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "should respond with NOT_FOUND status code in case if user doesn",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "Advanced Scope"
+    },
+    {
+      "type": "subtask",
+      "text": "PORT value is stored into .env file",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "OpenAPI spec in doc folder corresponds with assignment",
+      "max": 20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-670</b> Changes in tests",
+      "max": -670
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-30%</b> of max task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> No separate development branch",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> No Pull Request",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-10</b> Pull Request description is incorrect",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-10</b> Every lint error after npm run lint using local config (errors, not warnings), -10 points per each",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> Less than 3 commits in the development branch, not including commits that make changes only to Readme.md or similar files (tsconfig.json, .gitignore, .prettierrc.json, etc.)",
+      "max": -20
+    }
+  ]
+}
