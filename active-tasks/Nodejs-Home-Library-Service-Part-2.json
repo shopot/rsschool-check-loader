@@ -1,0 +1,162 @@
+{
+  "taskName": "Node.js Home Library Service: Part 2",
+  "github": "https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/containerization-database-orm/assignment.md",
+  "information": "The maximum number of points is 360. Cross-check criteria:",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "Basic Scope"
+    },
+    {
+      "type": "subtask",
+      "text": "Readme.md has instruction how to run application",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "User-defined bridge is created and configured",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "Container auto restart after crash",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "Application is restarting upon changes implemented into src folder",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Database files and logs to be stored in volumes instead of container",
+      "max": 30
+    },
+    {
+      "type": "title",
+      "title": "Database (PostgreSQL) & ORM"
+    },
+    {
+      "type": "subtask",
+      "text": "Users data is stored in PostgreSQL database and typeorm / prisma interacts with the database to manipulate data.",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Artists data is stored in PostgreSQL database and typeorm / prisma interacts with the database to manipulate data.",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Albums data is stored in PostgreSQL database and typeorm / prisma interacts with the database to manipulate data.",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Tracks data is stored in PostgreSQL database and typeorm / prisma interacts with the database to manipulate data.",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Favorites data is stored in PostgreSQL database and typeorm / prisma interacts with the database to manipulate data.",
+      "max": 20
+    },
+    {
+      "type": "title",
+      "title": "Advanced Scope"
+    },
+    {
+      "type": "title",
+      "title": "Containerization, Docker"
+    },
+    {
+      "type": "subtask",
+      "text": "Final size of the Docker image with application is less than 500 MB",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Implemented npm script for vulnerabilities scanning (free solution)",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Your built image is pushed to DockerHub",
+      "max": 20
+    },
+    {
+      "type": "title",
+      "title": "Database & ORM"
+    },
+    {
+      "type": "subtask",
+      "text": "Migrations are used to create database entities",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "Variables used for connection to database to be stored in .env",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "typeorm decorators or prisma relations create relations between entities",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Local PostgreSQL installation is not required for task check, connection is implemented to database stored in docker container (on the basis of the previous task)",
+      "max": 30
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> In case specific image is not used (it is required to use images like postgres and node, but not ubuntu with installation of node or postgres)",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> Postgres container is not configured as dependency for application container",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-10</b> For each failing test with npm run test (-10 points per each)",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> docker-compose.yml contains hardcoded variables",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-30%</b> of max task score Commits after deadline (except commits that affect only Readme.md, .gitignore, etc.)",
+      "max": 0
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-40</b> No Pull Request",
+      "max": -40
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b> PR description is incorrect",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-40</b> No separate development branch",
+      "max": -40
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-20</b>  Less than 3 commits in the development branch, not taking into account commits, making changes only in Readme.md or similar files (tsconfig.json, .gitignore, .prettierrc.json, etc.)",
+      "max": -20
+    },
+    {
+      "type": "penalty",
+      "text": "<b>-10</b> points for each error either on npm run lint on the basis of the local config or for compilation errors on the basis of the local tsconfig (errors not warnings), -10 points per each",
+      "max": -20
+    }
+  ]
+}
