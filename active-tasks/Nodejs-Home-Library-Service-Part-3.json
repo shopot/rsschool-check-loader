@@ -134,7 +134,7 @@
     },
     {
       "type": "penalty",
-      "text": "<b>-40</b> No separate development branch",
+      "text": "<b>-20</b> No separate development branch",
       "max": -20
     },
     {
