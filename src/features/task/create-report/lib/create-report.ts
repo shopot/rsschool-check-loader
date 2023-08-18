@@ -25,7 +25,10 @@ export const createReport = (criteriaResults: TypeCriteria[], totalPoints: numbe
       const { text, value, reason } = subtask;
 
       if (text) {
-        const strData = `### ${text}\n\n#### Assessment: ${value}\n\n${reason}`;
+        const strData = `### ${text.replace(
+          /<(\/*)b>*>/g,
+          ''
+        )}\n\n#### Assessment: ${value}\n\n${reason}`;
 
         penaltyResults.push(strData);
       }
